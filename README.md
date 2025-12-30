@@ -18,7 +18,6 @@ ShowPulse is a comprehensive platform that helps real estate agents:
 
 - [Getting Started Guide](GETTING_STARTED.md)
 - [API Reference](API.md)
-- [Integration Guide](INTEGRATIONS.md)
 - [Pricing & Plans](PRICING.md)
 - [FAQ](FAQ.md)
 
@@ -32,6 +31,7 @@ ShowPulse is a comprehensive platform that helps real estate agents:
 ## Features
 
 ### Lead Capture
+
 - **Kiosk Mode**: Touchscreen-friendly sign-in for open houses
 - **QR Codes**: Downloadable QR codes for event magic links
 - **Perpetual Events**: Always-on lead capture that never expires
@@ -39,6 +39,7 @@ ShowPulse is a comprehensive platform that helps real estate agents:
 - **Offline Support**: Works without internet, syncs when connected
 
 ### Tour Management
+
 - **Multiplayer Mode**: Multiple household members join via magic links
 - **Live Leaderboard**: Real-time property rankings
 - **Room-by-Room Rating**: Detailed feedback on every space
@@ -46,6 +47,7 @@ ShowPulse is a comprehensive platform that helps real estate agents:
 - **Silent Signals**: Private agent-only flags
 
 ### Decision Decks
+
 - **Comparison Matrix**: Side-by-side property analysis
 - **Offer Scenarios**: Financial modeling with multiple scenarios
 - **Affordability Calculator**: Monthly payment breakdown

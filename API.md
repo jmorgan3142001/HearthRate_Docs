@@ -16,12 +16,12 @@ Authorization: Bearer <access_token>
 
 ### Token Endpoints
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/v1/auth/register/` | POST | Register a new agent account |
-| `/api/v1/auth/login/` | POST | Obtain access and refresh tokens |
-| `/api/v1/auth/refresh/` | POST | Refresh an expired access token |
-| `/api/v1/auth/google/` | POST | Authenticate via Google OAuth |
+| Endpoint                 | Method | Description                      |
+| ------------------------ | ------ | -------------------------------- |
+| `/api/v1/auth/register/` | POST   | Register a new agent account     |
+| `/api/v1/auth/login/`    | POST   | Obtain access and refresh tokens |
+| `/api/v1/auth/refresh/`  | POST   | Refresh an expired access token  |
+| `/api/v1/auth/google/`   | POST   | Authenticate via Google OAuth    |
 
 ### Client Token Authentication
 
@@ -40,14 +40,14 @@ Manage user profiles, subscriptions, and account data.
 
 ### Profile Endpoints
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/v1/auth/profile/` | GET | Retrieve authenticated user's profile |
-| `/api/v1/auth/profile/` | PATCH | Update user profile |
-| `/api/v1/auth/profile/upload-photo/` | POST | Upload profile picture |
-| `/api/v1/auth/data-export/` | GET | Export all user data (GDPR/CCPA) |
-| `/api/v1/auth/account/delete/` | POST | Request account deletion |
-| `/api/v1/auth/subscription/change-plan/` | POST | Change subscription tier |
+| Endpoint                                 | Method | Description                           |
+| ---------------------------------------- | ------ | ------------------------------------- |
+| `/api/v1/auth/profile/`                  | GET    | Retrieve authenticated user's profile |
+| `/api/v1/auth/profile/`                  | PATCH  | Update user profile                   |
+| `/api/v1/auth/profile/upload-photo/`     | POST   | Upload profile picture                |
+| `/api/v1/auth/data-export/`              | GET    | Export all user data (GDPR/CCPA)      |
+| `/api/v1/auth/account/delete/`           | POST   | Request account deletion              |
+| `/api/v1/auth/subscription/change-plan/` | POST   | Change subscription tier              |
 
 ### Get User Profile
 
@@ -57,6 +57,7 @@ Authorization: Bearer <access_token>
 ```
 
 **Response:**
+
 ```json
 {
   "id": "user-uuid",
@@ -104,10 +105,12 @@ photo: <image file>
 ```
 
 **Constraints:**
+
 - Max file size: 5MB
 - Allowed formats: JPEG, PNG, WebP
 
 **Response:**
+
 ```json
 {
   "url": "https://cdn.showpulse.io/profiles/user-uuid.jpg"
@@ -124,6 +127,7 @@ Authorization: Bearer <access_token>
 ```
 
 **Response:** JSON file download containing:
+
 - User profile
 - Events
 - Leads
@@ -139,6 +143,7 @@ Authorization: Bearer <access_token>
 ```
 
 **Response:**
+
 ```json
 {
   "message": "Deletion request submitted. Check your email to confirm.",
@@ -159,6 +164,7 @@ Content-Type: application/json
 ```
 
 **Available tiers:**
+
 - `free` - Free tier (5 tours, 5 decks)
 - `pro` - Pro tier ($20/mo, unlimited)
 - `team-5` - Team 5 ($60/mo, 5 seats)
@@ -167,6 +173,7 @@ Content-Type: application/json
 - `team-50` - Team 50 ($350/mo, 50 seats)
 
 **Response:**
+
 ```json
 {
   "id": "subscription-uuid",
@@ -194,19 +201,19 @@ Tours represent scheduled property visits with multiplayer support for household
 
 ### Tour Endpoints
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/v1/tours/` | GET | List all tours for the authenticated agent |
-| `/api/v1/tours/` | POST | Create a new tour |
-| `/api/v1/tours/{id}/` | GET | Retrieve tour details |
-| `/api/v1/tours/{id}/` | PATCH | Update tour details |
-| `/api/v1/tours/{id}/` | DELETE | Delete a tour |
-| `/api/v1/tours/{id}/mark_running_late/` | POST | Update ETA for running late |
-| `/api/v1/tours/{id}/leaderboard/` | GET | Get live property rankings |
-| `/api/v1/tours/{id}/lobby_url/` | GET | Get shareable lobby URL |
-| `/api/v1/tours/{id}/send_invites/` | POST | Send invites to group members |
-| `/api/v1/tours/{id}/analytics/` | GET | Get tour statistics |
-| `/api/v1/tours/sync/` | POST | Sync offline operations |
+| Endpoint                                | Method | Description                                |
+| --------------------------------------- | ------ | ------------------------------------------ |
+| `/api/v1/tours/`                        | GET    | List all tours for the authenticated agent |
+| `/api/v1/tours/`                        | POST   | Create a new tour                          |
+| `/api/v1/tours/{id}/`                   | GET    | Retrieve tour details                      |
+| `/api/v1/tours/{id}/`                   | PATCH  | Update tour details                        |
+| `/api/v1/tours/{id}/`                   | DELETE | Delete a tour                              |
+| `/api/v1/tours/{id}/mark_running_late/` | POST   | Update ETA for running late                |
+| `/api/v1/tours/{id}/leaderboard/`       | GET    | Get live property rankings                 |
+| `/api/v1/tours/{id}/lobby_url/`         | GET    | Get shareable lobby URL                    |
+| `/api/v1/tours/{id}/send_invites/`      | POST   | Send invites to group members              |
+| `/api/v1/tours/{id}/analytics/`         | GET    | Get tour statistics                        |
+| `/api/v1/tours/sync/`                   | POST   | Sync offline operations                    |
 
 ### Create Tour
 
@@ -222,6 +229,7 @@ Content-Type: application/json
 ```
 
 **Response:**
+
 ```json
 {
   "id": "tour-uuid",
@@ -247,6 +255,7 @@ Content-Type: application/json
 ```
 
 **Response:**
+
 ```json
 {
   "status": "success",
@@ -262,6 +271,7 @@ GET /api/v1/tours/{id}/leaderboard/
 ```
 
 **Response:**
+
 ```json
 [
   {
@@ -285,13 +295,13 @@ GET /api/v1/tours/{id}/leaderboard/
 
 ### Tour Stop Endpoints (Nested)
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/v1/tours/{tour_id}/stops/` | GET | List stops for a tour |
-| `/api/v1/tours/{tour_id}/stops/` | POST | Add a property to tour |
-| `/api/v1/tours/{tour_id}/stops/{id}/` | GET | Get stop details |
-| `/api/v1/tours/{tour_id}/stops/{id}/` | DELETE | Remove stop from tour |
-| `/api/v1/tours/{tour_id}/stops/reorder/` | POST | Reorder stops |
+| Endpoint                                 | Method | Description            |
+| ---------------------------------------- | ------ | ---------------------- |
+| `/api/v1/tours/{tour_id}/stops/`         | GET    | List stops for a tour  |
+| `/api/v1/tours/{tour_id}/stops/`         | POST   | Add a property to tour |
+| `/api/v1/tours/{tour_id}/stops/{id}/`    | GET    | Get stop details       |
+| `/api/v1/tours/{tour_id}/stops/{id}/`    | DELETE | Remove stop from tour  |
+| `/api/v1/tours/{tour_id}/stops/reorder/` | POST   | Reorder stops          |
 
 ### Reorder Stops
 
@@ -306,11 +316,11 @@ Content-Type: application/json
 
 ### Tour Feedback Endpoints (Nested)
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/v1/tours/{tour_id}/stops/{stop_id}/feedback/` | GET | List feedback for a stop |
-| `/api/v1/tours/{tour_id}/stops/{stop_id}/feedback/` | POST | Submit feedback |
-| `/api/v1/tours/{tour_id}/stops/{stop_id}/feedback/{id}/` | PATCH | Update feedback |
+| Endpoint                                                 | Method | Description              |
+| -------------------------------------------------------- | ------ | ------------------------ |
+| `/api/v1/tours/{tour_id}/stops/{stop_id}/feedback/`      | GET    | List feedback for a stop |
+| `/api/v1/tours/{tour_id}/stops/{stop_id}/feedback/`      | POST   | Submit feedback          |
+| `/api/v1/tours/{tour_id}/stops/{stop_id}/feedback/{id}/` | PATCH  | Update feedback          |
 
 ### Submit Feedback
 
@@ -362,6 +372,7 @@ Content-Type: application/json
 ```
 
 **Supported Operation Types:**
+
 - `feedback_create` - Create new feedback
 - `feedback_update` - Update existing feedback
 - `tour_update` - Update tour details
@@ -369,12 +380,21 @@ Content-Type: application/json
 - `running_late` - Update running late status
 
 **Response:**
+
 ```json
 {
   "processed": 2,
   "results": [
-    {"offline_uuid": "client-uuid", "status": "created", "server_id": "feedback-uuid"},
-    {"offline_uuid": "client-uuid-2", "status": "updated", "server_id": "tour-uuid"}
+    {
+      "offline_uuid": "client-uuid",
+      "status": "created",
+      "server_id": "feedback-uuid"
+    },
+    {
+      "offline_uuid": "client-uuid-2",
+      "status": "updated",
+      "server_id": "tour-uuid"
+    }
   ]
 }
 ```
@@ -387,18 +407,18 @@ Decision Decks are comparison boards for narrowed-down properties with financial
 
 ### Deck Endpoints
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/v1/decks/` | GET | List all decks |
-| `/api/v1/decks/` | POST | Create a new deck |
-| `/api/v1/decks/{id}/` | GET | Get deck details |
-| `/api/v1/decks/{id}/` | PATCH | Update deck |
-| `/api/v1/decks/{id}/` | DELETE | Delete deck |
-| `/api/v1/decks/{id}/matrix/` | GET | Get comparison matrix |
-| `/api/v1/decks/{id}/share_link/` | GET | Get shareable client link |
-| `/api/v1/decks/{id}/export_pdf/` | GET | Export as PDF |
-| `/api/v1/decks/{id}/view/` | GET | Client view (magic link) |
-| `/api/v1/decks/sync/` | POST | Sync offline operations |
+| Endpoint                         | Method | Description               |
+| -------------------------------- | ------ | ------------------------- |
+| `/api/v1/decks/`                 | GET    | List all decks            |
+| `/api/v1/decks/`                 | POST   | Create a new deck         |
+| `/api/v1/decks/{id}/`            | GET    | Get deck details          |
+| `/api/v1/decks/{id}/`            | PATCH  | Update deck               |
+| `/api/v1/decks/{id}/`            | DELETE | Delete deck               |
+| `/api/v1/decks/{id}/matrix/`     | GET    | Get comparison matrix     |
+| `/api/v1/decks/{id}/share_link/` | GET    | Get shareable client link |
+| `/api/v1/decks/{id}/export_pdf/` | GET    | Export as PDF             |
+| `/api/v1/decks/{id}/view/`       | GET    | Client view (magic link)  |
+| `/api/v1/decks/sync/`            | POST   | Sync offline operations   |
 
 ### Create Deck
 
@@ -419,6 +439,7 @@ GET /api/v1/decks/{id}/matrix/
 ```
 
 **Response:**
+
 ```json
 {
   "deck_id": "deck-uuid",
@@ -447,12 +468,12 @@ GET /api/v1/decks/{id}/matrix/
 
 ### Deck Item Endpoints (Nested)
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/v1/decks/{deck_id}/items/` | GET | List items in deck |
-| `/api/v1/decks/{deck_id}/items/` | POST | Add property to deck |
-| `/api/v1/decks/{deck_id}/items/{id}/` | DELETE | Remove from deck |
-| `/api/v1/decks/{deck_id}/items/rerank/` | POST | Update rankings |
+| Endpoint                                | Method | Description          |
+| --------------------------------------- | ------ | -------------------- |
+| `/api/v1/decks/{deck_id}/items/`        | GET    | List items in deck   |
+| `/api/v1/decks/{deck_id}/items/`        | POST   | Add property to deck |
+| `/api/v1/decks/{deck_id}/items/{id}/`   | DELETE | Remove from deck     |
+| `/api/v1/decks/{deck_id}/items/rerank/` | POST   | Update rankings      |
 
 ### Rerank Items
 
@@ -471,12 +492,12 @@ Content-Type: application/json
 
 ### Offer Scenario Endpoints (Nested)
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/v1/decks/{deck_id}/items/{item_id}/scenarios/` | GET | List scenarios |
-| `/api/v1/decks/{deck_id}/items/{item_id}/scenarios/` | POST | Create scenario |
-| `/api/v1/decks/{deck_id}/items/{item_id}/scenarios/{id}/` | PATCH | Update scenario |
-| `/api/v1/decks/{deck_id}/items/{item_id}/scenarios/compare/` | GET | Compare scenarios |
+| Endpoint                                                     | Method | Description       |
+| ------------------------------------------------------------ | ------ | ----------------- |
+| `/api/v1/decks/{deck_id}/items/{item_id}/scenarios/`         | GET    | List scenarios    |
+| `/api/v1/decks/{deck_id}/items/{item_id}/scenarios/`         | POST   | Create scenario   |
+| `/api/v1/decks/{deck_id}/items/{item_id}/scenarios/{id}/`    | PATCH  | Update scenario   |
+| `/api/v1/decks/{deck_id}/items/{item_id}/scenarios/compare/` | GET    | Compare scenarios |
 
 ### Create Offer Scenario
 
@@ -497,6 +518,7 @@ Content-Type: application/json
 ```
 
 **Response:**
+
 ```json
 {
   "id": "scenario-uuid",
@@ -556,6 +578,7 @@ Content-Type: application/json
 ```
 
 **Supported Operation Types:**
+
 - `deck_create` - Create new deck
 - `deck_update` - Update deck
 - `item_create` - Add item to deck
@@ -587,6 +610,7 @@ Content-Type: application/json
 ```
 
 **Response:**
+
 ```json
 {
   "loan_amount": 360000,
@@ -615,14 +639,14 @@ Events represent open houses and lead capture opportunities.
 
 ### Event Endpoints
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/v1/events/` | GET | List all events |
-| `/api/v1/events/` | POST | Create event |
-| `/api/v1/events/{id}/` | GET | Get event details |
-| `/api/v1/events/perpetual/` | GET | Get user's perpetual event (always-on lead capture) |
-| `/api/v1/events/{id}/qr_code/` | GET | Get QR code for kiosk |
-| `/api/v1/events/{id}/seller_report/` | GET | Generate seller report PDF |
+| Endpoint                             | Method | Description                                         |
+| ------------------------------------ | ------ | --------------------------------------------------- |
+| `/api/v1/events/`                    | GET    | List all events                                     |
+| `/api/v1/events/`                    | POST   | Create event                                        |
+| `/api/v1/events/{id}/`               | GET    | Get event details                                   |
+| `/api/v1/events/perpetual/`          | GET    | Get user's perpetual event (always-on lead capture) |
+| `/api/v1/events/{id}/qr_code/`       | GET    | Get QR code for kiosk                               |
+| `/api/v1/events/{id}/seller_report/` | GET    | Generate seller report PDF                          |
 
 ### Get Perpetual Event
 
@@ -634,6 +658,7 @@ Authorization: Bearer <access_token>
 ```
 
 **Response:**
+
 ```json
 {
   "id": "event-uuid",
@@ -656,49 +681,36 @@ Leads represent potential buyers from events.
 
 ### Lead Endpoints
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/v1/leads/` | GET | List all leads |
-| `/api/v1/leads/` | POST | Create lead (kiosk submission) |
-| `/api/v1/leads/{id}/` | GET | Get lead details |
-| `/api/v1/leads/{id}/promote/` | POST | Promote to client |
-| `/api/v1/leads/sync_offline/` | POST | Sync offline leads |
+| Endpoint                      | Method | Description                    |
+| ----------------------------- | ------ | ------------------------------ |
+| `/api/v1/leads/`              | GET    | List all leads                 |
+| `/api/v1/leads/`              | POST   | Create lead (kiosk submission) |
+| `/api/v1/leads/{id}/`         | GET    | Get lead details               |
+| `/api/v1/leads/{id}/promote/` | POST   | Promote to client              |
+| `/api/v1/leads/sync_offline/` | POST   | Sync offline leads             |
 
 ### Lead Scoring
 
 Leads are automatically scored using a dual-bucket system:
 
 **Deal Score** (0-100): Likelihood to make offer on this property
-- Pre-approved (+30)
-- Cash buyer (+20)
-- Urgent timeline (+20)
-- High property rating (+15)
-
 **Lead Score** (0-100): Likelihood to become a client
-- No current agent (+40)
-- Decision maker (+20)
-- Pre-approved (+20)
-- Urgent timeline (+15)
-
-**Status Tiers:**
-- HOT: Score >= 70
-- WARM: Score 40-69
-- COLD: Score < 40
 
 ---
 
 ## Dashboard API
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/v1/dashboard/stats/` | GET | Get dashboard statistics |
+| Endpoint                   | Method | Description              |
+| -------------------------- | ------ | ------------------------ |
+| `/api/v1/dashboard/stats/` | GET    | Get dashboard statistics |
 
 **Response:**
+
 ```json
 {
-  "active_leads": {"value": 42, "trend": "+15%"},
-  "event_signins": {"value": 156, "trend": "+8%"},
-  "offers_generated": {"value": 12, "trend": "+3"},
+  "active_leads": { "value": 42, "trend": "+15%" },
+  "event_signins": { "value": 156, "trend": "+8%" },
+  "offers_generated": { "value": 12, "trend": "+3" },
   "recent_activity": [
     {
       "id": "lead-uuid",
@@ -725,26 +737,13 @@ All errors follow a consistent format:
 }
 ```
 
-### Common Status Codes
-
-| Code | Description |
-|------|-------------|
-| 200 | Success |
-| 201 | Created |
-| 400 | Bad Request - Invalid input |
-| 401 | Unauthorized - Missing or invalid token |
-| 403 | Forbidden - Insufficient permissions |
-| 404 | Not Found - Resource doesn't exist |
-| 409 | Conflict - Duplicate resource |
-| 500 | Server Error |
-
 ---
 
 ## Rate Limiting
 
 - Anonymous: 500 requests/hour
 - Authenticated: 2000 requests/hour
-- Login attempts: 5 requests/minute
+- Login attempts: 15 requests/minute
 
 ---
 
@@ -752,11 +751,11 @@ All errors follow a consistent format:
 
 Configure webhooks to receive real-time notifications:
 
-| Event | Description |
-|-------|-------------|
-| `lead.created` | New lead submitted |
-| `lead.promoted` | Lead converted to client |
-| `tour.completed` | Tour marked complete |
-| `feedback.submitted` | New feedback received |
+| Event                | Description              |
+| -------------------- | ------------------------ |
+| `lead.created`       | New lead submitted       |
+| `lead.promoted`      | Lead converted to client |
+| `tour.completed`     | Tour marked complete     |
+| `feedback.submitted` | New feedback received    |
 
 See `/api/v1/webhooks/` for webhook management.

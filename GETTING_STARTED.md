@@ -19,12 +19,13 @@ Welcome to ShowPulse! This guide will help you get up and running in minutes.
 2. Click **Sign Up**
 3. Enter your email and create a password
 4. Choose your plan:
+
    - **Free**: Start with 5 tours + 5 decks
    - **Pro**: Unlimited tours and decks ($20/month)
    - **Team**: Collaborate with your brokerage
 
-4. Verify your email address
-5. Complete your profile (name, brokerage, license number)
+5. Verify your email address
+6. Complete your profile (name, brokerage, license number)
 
 **Pro Tip:** Add your profile photo and bio - it appears on your client-facing pages!
 
@@ -210,18 +211,22 @@ Decision decks help clients compare properties side-by-side and model offers.
 ## Troubleshooting
 
 ### Can't scan QR code?
+
 - Ensure good lighting and steady hands
 - Try the direct link instead
 
 ### Lost internet during tour?
+
 - No problem! ShowPulse works offline
 - Data syncs when you're back online
 
 ### Client can't access tour?
+
 - Check the magic link hasn't expired
 - Resend the invite from your dashboard
 
 ### Need more help?
+
 - Email support@showpulse.com
 - Include your account email and describe the issue
 

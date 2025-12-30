@@ -9,6 +9,7 @@ ShowPulse is a modern lead capture and tour management platform built specifical
 ### Who is ShowPulse for?
 
 ShowPulse is designed for:
+
 - **Individual agents** looking to streamline lead capture
 - **Small teams** collaborating on client tours
 - **Brokerages** managing multiple agents
@@ -60,6 +61,7 @@ Each event has a unique QR code that visitors can scan with their phone camera. 
 ### What is lead scoring?
 
 ShowPulse uses a dual-bucket scoring system:
+
 - **Deal Score**: Likelihood to make an offer on THIS property
 - **Lead Score**: Likelihood to become a client overall
 
@@ -107,6 +109,7 @@ Yes! Each property can have multiple scenarios (e.g., full price vs. lower offer
 ### What's included in the affordability calculator?
 
 The calculator shows:
+
 - Monthly principal & interest
 - Property taxes
 - Homeowners insurance
@@ -121,6 +124,7 @@ The calculator shows:
 ### Is my data secure?
 
 Yes! We use:
+
 - Encryption in transit (HTTPS/TLS)
 - Encrypted database storage
 - JWT-based authentication
@@ -145,6 +149,7 @@ Yes, ShowPulse is fully compliant with GDPR (EU) and CCPA (California) privacy r
 ### Does ShowPulse work offline?
 
 Yes! ShowPulse is built with offline-first architecture. You can:
+
 - Capture leads without internet
 - Conduct tours offline
 - Rate properties without connectivity
@@ -153,6 +158,7 @@ Yes! ShowPulse is built with offline-first architecture. You can:
 ### What devices does ShowPulse support?
 
 ShowPulse works on:
+
 - **Desktop**: Windows, Mac, Linux (any modern browser)
 - **Mobile**: iOS (Safari), Android (Chrome)
 - **Tablets**: iPad, Android tablets
@@ -174,6 +180,7 @@ Yes! Your account syncs across all devices. Start a tour on your laptop and fini
 ### Does ShowPulse integrate with my CRM?
 
 Yes! ShowPulse supports:
+
 - **Webhooks**: Send leads to any CRM via HTTP POST
 - **Zapier**: Connect to 5,000+ apps (coming soon)
 - **API**: Build custom integrations
@@ -195,6 +202,7 @@ ShowPulse can send tour invites and notifications via email. SMS support is comi
 ### How do team plans work?
 
 Team plans provide multiple seats for your brokerage:
+
 - **Shared leads**: Distribute leads among agents
 - **Team analytics**: See brokerage-wide stats
 - **Member management**: Add/remove agents
@@ -253,6 +261,6 @@ We're here to help!
 
 - **Email:** support@showpulse.com
 - **Response Time:** Within 24 hours (business days)
-- **Hours:** Monday-Friday, 9 AM - 5 PM PT
+- **Hours:** Monday-Friday, 9 AM - 5 PM ET
 
 For API questions, check our [API Documentation](API.md).
