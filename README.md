@@ -37,6 +37,15 @@ ShowPulse is a comprehensive platform that helps real estate agents:
 - **Perpetual Events**: Always-on lead capture that never expires
 - **Dual Scoring**: Automatic lead qualification (Deal Score + Lead Score)
 - **Offline Support**: Works without internet, syncs when connected
+- **Event Management**: Edit events, generate reports, and track performance
+
+### Client Management
+
+- **Client Groups**: Organize clients into household buying units
+- **Group Management**: Add/remove members, track budgets and pre-approvals
+- **Lead Promotion**: Convert leads to clients with one click
+- **Archive & Restore**: Soft delete with recovery options
+- **Multi-Group Support**: Clients can belong to multiple groups
 
 ### Tour Management
 
@@ -45,6 +54,8 @@ ShowPulse is a comprehensive platform that helps real estate agents:
 - **Room-by-Room Rating**: Detailed feedback on every space
 - **ETA Tracker**: One-tap running late notifications
 - **Silent Signals**: Private agent-only flags
+- **Lobby Links**: One-click shareable links for client access
+- **Tour Editing**: Update tour details on the fly
 
 ### Decision Decks
 
@@ -52,6 +63,13 @@ ShowPulse is a comprehensive platform that helps real estate agents:
 - **Offer Scenarios**: Financial modeling with multiple scenarios
 - **Affordability Calculator**: Monthly payment breakdown
 - **Conflict Detection**: Highlights rating disagreements
+
+### Dashboard & Activity
+
+- **Unified Activity Feed**: Track all leads, clients, tours, and decks in one place
+- **Pagination**: Browse historical activity with ease
+- **Quick Navigation**: Click any activity to jump to details
+- **Real-Time Updates**: Stay informed with live activity tracking
 
 ## Pricing
 
