@@ -70,7 +70,6 @@ Authorization: Bearer <access_token>
   "brokerage_name": "Smith Realty",
   "profile_picture": "https://cdn.showpulse.io/profiles/user-uuid.jpg",
   "timezone": "US/Eastern",
-  "is_demo": false,
   "created_at": "2024-01-15T10:00:00Z"
 }
 ```
