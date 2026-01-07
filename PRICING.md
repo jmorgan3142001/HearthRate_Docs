@@ -8,32 +8,32 @@ ShowPulse uses a tiered pricing model designed to serve individual agents and sc
 
 ### Free Plan
 
-- **Price:** $0/month
-- **Seats:** N/A (individual)
-- **Target Audience:** Agents trying out lead sign-in functionality
-- **Features:**
-  - Unlimited open house and live events
-  - QR code sign-in
-  - Basic lead capture
-  - Lead export (CSV/PDF)
+-   **Price:** $0/month
+-   **Seats:** N/A (individual)
+-   **Target Audience:** Agents trying out lead sign-in functionality
+-   **Features:**
+    -   Unlimited open house and live events
+    -   QR code sign-in
+    -   Basic lead capture
+    -   Lead export (CSV/PDF)
 
 ### Pro Plan
 
-- **Price:** $20/month
-- **Seats:** 1 agent
-- **Per-Seat Cost:** $20
-- **Target Audience:** Solo agents and independent professionals
-- **Features:**
-  - Everything in Free
-  - Automatic lead scoring
-  - Email/SMS notifications
-  - Multiplayer tour mode
-  - Live property leaderboard
-  - Decision Deck comparisons
-  - Offer scenario modeling
-  - Offline mode
-  - Client magic links
-  - Priority support
+-   **Price:** $20/month
+-   **Seats:** 1 agent
+-   **Per-Seat Cost:** $20
+-   **Target Audience:** Solo agents and independent professionals
+-   **Features:**
+    -   Everything in Free
+    -   Automatic lead scoring
+    -   Email/SMS notifications
+    -   Multiplayer tour mode
+    -   Live property leaderboard
+    -   Decision Deck comparisons
+    -   Offer scenario modeling
+    -   Offline mode
+    -   Client magic links
+    -   Priority support
 
 ### Team Plans
 
@@ -48,24 +48,24 @@ Team pricing follows a **volume discount model** where the per-seat cost decreas
 
 **Additional Team Features:**
 
-- Everything in Pro (per agent)
-- Round-robin lead distribution
-- First-come-first-served mode
-- Team analytics dashboard
-- Co-hosted events
-- Admin controls
+-   Everything in Pro (per agent)
+-   Round-robin lead distribution
+-   First-come-first-served mode
+-   Team analytics dashboard
+-   Co-hosted events
+-   Admin controls
 
 ### Enterprise Plan
 
-- **Price:** Custom pricing (contact sales)
-- **Seats:** Unlimited
-- **Target Audience:** Large brokerages and franchises
-- **Features:**
-  - Everything in Team
-  - Custom integrations
-  - Company branding (white-label options)
-  - Dedicated support
-  - Custom SLAs
+-   **Price:** Custom pricing (contact sales)
+-   **Seats:** Unlimited
+-   **Target Audience:** Large brokerages and franchises
+-   **Features:**
+    -   Everything in Team
+    -   Custom integrations
+    -   Company branding (white-label options)
+    -   Dedicated support
+    -   Custom SLAs
 
 ## Pricing Algorithm
 
@@ -96,32 +96,32 @@ Seats → Price
 
 ## Billing Cycles
 
-- **Monthly:** Default billing cycle
-- **Annual:** 20% discount (available on request)
-  - Pro Annual: $192/year (save $48)
-  - Team 5 Annual: $576/year (save $144)
-  - etc.
+-   **Monthly:** Default billing cycle
+-   **Annual:** 20% discount (available on request)
+    -   Pro Annual: $192/year (save $48)
+    -   Team 5 Annual: $576/year (save $144)
+    -   etc.
 
 ## Trial Period
 
-- **Pro Plan:** 14-day free trial
-- **Team Plans:** 14-day free trial
-- **No Credit Card Required:** Users can explore full functionality before committing
-- **After Trial:** Automatic downgrade to Free plan if no payment method added
+-   **Pro Plan**
+-   **Team Plans**
+-   **No Credit Card Required:** Users can explore full functionality before committing
+-   **After Trial:** Automatic downgrade to Free plan if no payment method added
 
 ## Upgrades & Downgrades
 
 ### Upgrading
 
-- Immediate access to new features
-- Prorated credit applied for remainder of billing cycle
-- No service interruption
+-   Immediate access to new features
+-   Prorated credit applied for remainder of billing cycle
+-   No service interruption
 
 ### Downgrading
 
-- Takes effect at next billing cycle
-- Data retained for 90 days (read-only after downgrade)
-- Can re-upgrade within 90 days without data loss
+-   Takes effect at next billing cycle
+-   Data retained for 90 days (read-only after downgrade)
+-   Can re-upgrade within 90 days without data loss
 
 ## Agent Portability
 
@@ -129,17 +129,17 @@ ShowPulse is designed around the **agent as the primary entity**, not the broker
 
 ### What Agents Own (Portable Across Organizations)
 
-- **Tours:** All tour history and data
-- **Clients:** Client relationships and ClientGroups
-- **Decision Decks:** Property comparisons and offer scenarios
-- **Lead History:** Personal lead capture history
-- **Uploaded Files:** Photos, notes, recordings
+-   **Tours:** All tour history and data
+-   **Clients:** Client relationships and ClientGroups
+-   **Decision Decks:** Property comparisons and offer scenarios
+-   **Lead History:** Personal lead capture history
+-   **Uploaded Files:** Photos, notes, recordings
 
 ### What Organizations Own (Non-Portable)
 
-- **Open House Events:** Events created under org context
-- **Team Analytics:** Aggregate team performance data
-- **Org Settings:** Lead distribution rules, branding
+-   **Open House Events:** Events created under org context
+-   **Team Analytics:** Aggregate team performance data
+-   **Org Settings:** Lead distribution rules, branding
 
 ### Moving Between Organizations
 
@@ -147,20 +147,20 @@ When an agent changes brokerages:
 
 1. **Agent retains:**
 
-   - All tour data and client relationships
-   - Personal subscription (if on Pro plan)
-   - Historical performance data
+    - All tour data and client relationships
+    - Personal subscription (if on Pro plan)
+    - Historical performance data
 
 2. **Process:**
 
-   - Admin removes agent from old organization
-   - Agent joins new organization (or stays solo on Pro plan)
-   - All personal data travels with agent
+    - Admin removes agent from old organization
+    - Agent joins new organization (or stays solo on Pro plan)
+    - All personal data travels with agent
 
 3. **Subscription Impact:**
-   - **If on Team plan:** Agent loses Team features when removed from org
-   - **If on Pro plan:** No change, remains on Pro plan
-   - **New org can:** Add agent to their Team plan subscription
+    - **If on Team plan:** Agent loses Team features when removed from org
+    - **If on Pro plan:** No change, remains on Pro plan
+    - **New org can:** Add agent to their Team plan subscription
 
 This model ensures agents never lose their data history (their "Touring Resume") when changing brokerages, which is critical in an industry with high turnover.
 
@@ -170,19 +170,19 @@ This model ensures agents never lose their data history (their "Touring Resume")
 
 **Subscription Tracking:**
 
-- `SubscriptionTier`: Defines available plans (Free, Pro, Team-5, Team-10, etc.)
-- `Subscription`: Tracks active subscription per User or Organization
-  - `subscriber_type`: 'user' or 'organization'
-  - `status`: 'active', 'trial', 'canceled', 'past_due'
-  - `current_period_start` / `current_period_end`
-  - `external_subscription_id`: Stripe subscription ID
+-   `SubscriptionTier`: Defines available plans (Free, Pro, Team-5, Team-10, etc.)
+-   `Subscription`: Tracks active subscription per User or Organization
+    -   `subscriber_type`: 'user' or 'organization'
+    -   `status`: 'active', 'trial', 'canceled', 'past_due'
+    -   `current_period_start` / `current_period_end`
+    -   `external_subscription_id`: Stripe subscription ID
 
 **Organization Membership:**
 
-- `OrganizationMembership`: Links User to Organization
-  - `OneToOneField(User)`: Agent can only be in ONE org at a time
-  - `role`: 'owner', 'admin', 'agent'
-  - `is_active`: Allows soft-deactivation without data loss
+-   `OrganizationMembership`: Links User to Organization
+    -   `OneToOneField(User)`: Agent can only be in ONE org at a time
+    -   `role`: 'owner', 'admin', 'agent'
+    -   `is_active`: Allows soft-deactivation without data loss
 
 **Seat Counting Logic:**
 
@@ -221,9 +221,9 @@ stripe.Subscription.create(
 **Metered Billing (Future):**
 For enterprise plans, consider metered billing for usage-based features:
 
-- SMS notifications sent
-- API calls to property enrichment services
-- Storage usage for uploaded files
+-   SMS notifications sent
+-   API calls to property enrichment services
+-   Storage usage for uploaded files
 
 ## Support Tiers
 
@@ -259,19 +259,19 @@ Features are controlled via JSONField in `SubscriptionTier.features`:
 
 ### Usage-Based Add-Ons
 
-- SMS overage: $0.02 per message beyond quota
-- Storage overage: $5 per 10GB beyond included amount
-- Premium property data: $0.05 per property lookup with enriched data
+-   SMS overage: $0.02 per message beyond quota
+-   Storage overage: $5 per 10GB beyond included amount
+-   Premium property data: $0.05 per property lookup with enriched data
 
 ### Partner Integrations
 
-- CRM integrations (Salesforce, HubSpot): $20/month add-on
-- Transaction management (Dotloop, Skyslope): $30/month add-on
-- MLS direct feeds: Custom pricing per MLS region
+-   CRM integrations (Salesforce, HubSpot): $20/month add-on
+-   Transaction management (Dotloop, Skyslope): $30/month add-on
+-   MLS direct feeds: Custom pricing per MLS region
 
 ### Geographic Expansion
 
-- International markets may require different pricing due to:
-  - Local payment processing fees
-  - Currency conversion
-  - Regional competitive landscape
+-   International markets may require different pricing due to:
+    -   Local payment processing fees
+    -   Currency conversion
+    -   Regional competitive landscape

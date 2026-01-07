@@ -10,10 +10,10 @@ By accessing or using ShowPulse ("the Service"), you agree to be bound by these 
 
 ShowPulse is a real estate showing management platform that enables agents to:
 
-- Manage property tours with clients
-- Capture and score leads from open houses
-- Create decision decks for property comparisons
-- Collaborate with clients via magic links
+-   Manage property tours with clients
+-   Capture and score leads from open houses
+-   Create decision decks for property comparisons
+-   Collaborate with clients via magic links
 
 ## 3. User Accounts
 
@@ -43,23 +43,19 @@ Paid subscriptions are billed monthly or annually in advance. Payments are proce
 
 You may cancel your subscription at any time from your Account Settings. Cancellations take effect at the end of the current billing period. We do not offer refunds for partial months or unused services.
 
-### Free Trial
-
-Paid plans may include a 14-day free trial. You will not be charged until the trial ends. Cancel before the trial ends to avoid charges.
-
 ## 5. Acceptable Use
 
 You agree not to:
 
-- Use the Service for any illegal or unauthorized purpose
-- Violate any laws in your jurisdiction (including copyright laws)
-- Upload or transmit viruses, malware, or other harmful code
-- Attempt to gain unauthorized access to the Service or other users' accounts
-- Harass, abuse, or harm other users
-- Scrape, spider, or crawl the Service
-- Use the Service to send spam or unsolicited messages
-- Impersonate another person or entity
-- Share your account with others
+-   Use the Service for any illegal or unauthorized purpose
+-   Violate any laws in your jurisdiction (including copyright laws)
+-   Upload or transmit viruses, malware, or other harmful code
+-   Attempt to gain unauthorized access to the Service or other users' accounts
+-   Harass, abuse, or harm other users
+-   Scrape, spider, or crawl the Service
+-   Use the Service to send spam or unsolicited messages
+-   Impersonate another person or entity
+-   Share your account with others
 
 ## 6. Intellectual Property
 
@@ -119,5 +115,5 @@ Questions about these Terms? Contact us:
 
 **ShowPulse Legal Team**
 
-- **Email:** [legal@showpulse.com](mailto:legal@showpulse.com)
-- **Address:** 123 Tech Street, San Francisco, CA 94105
+-   **Email:** [legal@showpulse.com](mailto:legal@showpulse.com)
+-   **Address:** 123 Tech Street, San Francisco, CA 94105
