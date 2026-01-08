@@ -102,13 +102,6 @@ Seats → Price
     -   Team 5 Annual: $576/year (save $144)
     -   etc.
 
-## Trial Period
-
--   **Pro Plan**
--   **Team Plans**
--   **No Credit Card Required:** Users can explore full functionality before committing
--   **After Trial:** Automatic downgrade to Free plan if no payment method added
-
 ## Upgrades & Downgrades
 
 ### Upgrading
