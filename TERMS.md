@@ -4,11 +4,11 @@
 
 ## 1. Acceptance of Terms
 
-By accessing or using ShowPulse ("the Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the Service. We reserve the right to modify these Terms at any time, and your continued use constitutes acceptance of any changes.
+By accessing or using HearthRate ("the Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the Service. We reserve the right to modify these Terms at any time, and your continued use constitutes acceptance of any changes.
 
 ## 2. Description of Service
 
-ShowPulse is a real estate showing management platform that enables agents to:
+HearthRate is a real estate showing management platform that enables agents to:
 
 -   Manage property tours with clients
 -   Capture and score leads from open houses
@@ -33,7 +33,7 @@ We reserve the right to suspend or terminate your account at our discretion if y
 
 ### Subscription Plans
 
-ShowPulse offers free and paid subscription tiers. Free tier users are limited to 5 tours and 5 decision decks. Paid plans provide unlimited usage and additional features.
+HearthRate offers free and paid subscription tiers. Free tier users are limited to 5 tours and 5 decision decks. Paid plans provide unlimited usage and additional features.
 
 ### Billing
 
@@ -61,7 +61,7 @@ You agree not to:
 
 ### Our Rights
 
-ShowPulse and its original content, features, and functionality are owned by us and are protected by copyright, trademark, and other intellectual property laws.
+HearthRate and its original content, features, and functionality are owned by us and are protected by copyright, trademark, and other intellectual property laws.
 
 ### Your Content
 
@@ -87,7 +87,7 @@ We do not guarantee that the Service will be uninterrupted, secure, or error-fre
 
 ### Limitation of Liability
 
-TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL SHOWPULSE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFITS, DATA LOSS, OR BUSINESS INTERRUPTION, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE SERVICE.
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL HEARTHRATE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFITS, DATA LOSS, OR BUSINESS INTERRUPTION, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE SERVICE.
 
 ### Maximum Liability
 
@@ -95,7 +95,7 @@ Our total liability to you for all claims arising from your use of the Service s
 
 ## 9. Indemnification
 
-You agree to indemnify and hold harmless ShowPulse and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including legal fees) arising out of your use of the Service, your violation of these Terms, or your violation of any rights of another party.
+You agree to indemnify and hold harmless HearthRate and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including legal fees) arising out of your use of the Service, your violation of these Terms, or your violation of any rights of another party.
 
 ## 10. Governing Law and Dispute Resolution
 
@@ -113,7 +113,7 @@ If any provision of these Terms is found to be unenforceable or invalid, that pr
 
 Questions about these Terms? Contact us:
 
-**ShowPulse Legal Team**
+**HearthRate Legal Team**
 
--   **Email:** [legal@showpulse.com](mailto:legal@showpulse.com)
+-   **Email:** [legal@hearthrate.app](mailto:legal@hearthrate.app)
 -   **Address:** 123 Tech Street, San Francisco, CA 94105

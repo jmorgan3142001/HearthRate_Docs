@@ -2,23 +2,23 @@
 
 ## General Questions
 
-### What is ShowPulse?
+### What is HearthRate?
 
-ShowPulse is a modern lead capture and tour management platform built specifically for real estate professionals. It helps agents capture leads at open houses, conduct property tours with clients, and facilitate decision-making through interactive comparison tools.
+HearthRate is a modern lead capture and tour management platform built specifically for real estate professionals. It helps agents capture leads at open houses, conduct property tours with clients, and facilitate decision-making through interactive comparison tools.
 
-### Who is ShowPulse for?
+### Who is HearthRate for?
 
-ShowPulse is designed for:
+HearthRate is designed for:
 
-- **Individual agents** looking to streamline lead capture
-- **Small teams** collaborating on client tours
-- **Brokerages** managing multiple agents
+-   **Individual agents** looking to streamline lead capture
+-   **Small teams** collaborating on client tours
+-   **Brokerages** managing multiple agents
 
 ### How much does it cost?
 
-- **Free**: 5 tours + 5 decks forever
-- **Pro**: $20/month - Unlimited everything
-- **Team Plans**: $60-$350/month for 5-50 seats
+-   **Free**: 5 tours + 5 decks forever
+-   **Pro**: $20/month - Unlimited everything
+-   **Team Plans**: $60-$350/month for 5-50 seats
 
 [View full pricing →](PRICING.md)
 
@@ -28,7 +28,7 @@ ShowPulse is designed for:
 
 ### Do I need a credit card for the free plan?
 
-No! The free plan is completely free with no credit card required. You get 5 tours and 5 decision decks to test ShowPulse.
+No! The free plan is completely free with no credit card required. You get 5 tours and 5 decision decks to test HearthRate.
 
 ### Can I cancel anytime?
 
@@ -60,10 +60,10 @@ Each event has a unique QR code that visitors can scan with their phone camera. 
 
 ### What is lead scoring?
 
-ShowPulse uses a dual-bucket scoring system:
+HearthRate uses a dual-bucket scoring system:
 
-- **Deal Score**: Likelihood to make an offer on THIS property
-- **Lead Score**: Likelihood to become a client overall
+-   **Deal Score**: Likelihood to make an offer on THIS property
+-   **Lead Score**: Likelihood to become a client overall
 
 Scores are calculated based on pre-approval status, timeline, current agent status, and more.
 
@@ -85,7 +85,7 @@ Yes! Once you share the tour link, clients can rate properties on their own sche
 
 ### What if I lose internet during a tour?
 
-No problem! ShowPulse works completely offline. All ratings and notes are saved locally on your device and automatically sync when you're back online.
+No problem! HearthRate works completely offline. All ratings and notes are saved locally on your device and automatically sync when you're back online.
 
 ### How many properties can I add to a tour?
 
@@ -97,8 +97,8 @@ Unlimited! Add as many stops as you need. The tour leaderboard automatically ran
 
 ### What's the difference between tours and decks?
 
-- **Tours**: For actively viewing properties in person with live feedback
-- **Decks**: For comparing shortlisted properties side-by-side and modeling offers
+-   **Tours**: For actively viewing properties in person with live feedback
+-   **Decks**: For comparing shortlisted properties side-by-side and modeling offers
 
 Think of tours as the "shopping" phase and decks as the "decision" phase.
 
@@ -110,12 +110,12 @@ Yes! Each property can have multiple scenarios (e.g., full price vs. lower offer
 
 The calculator shows:
 
-- Monthly principal & interest
-- Property taxes
-- Homeowners insurance
-- PMI (if down payment < 20%)
-- HOA fees
-- Total monthly payment
+-   Monthly principal & interest
+-   Property taxes
+-   Homeowners insurance
+-   PMI (if down payment < 20%)
+-   HOA fees
+-   Total monthly payment
 
 ---
 
@@ -125,10 +125,10 @@ The calculator shows:
 
 Yes! We use:
 
-- Encryption in transit (HTTPS/TLS)
-- Encrypted database storage
-- JWT-based authentication
-- Regular security audits
+-   Encryption in transit (HTTPS/TLS)
+-   Encrypted database storage
+-   JWT-based authentication
+-   Regular security audits
 
 ### Can I export my data?
 
@@ -140,36 +140,36 @@ Yes. Go to Settings → Data & Privacy → Delete Account. You'll receive a conf
 
 ### Are you GDPR and CCPA compliant?
 
-Yes, ShowPulse is fully compliant with GDPR (EU) and CCPA (California) privacy regulations. You have the right to access, export, and delete your data anytime.
+Yes, HearthRate is fully compliant with GDPR (EU) and CCPA (California) privacy regulations. You have the right to access, export, and delete your data anytime.
 
 ---
 
 ## Technical Questions
 
-### Does ShowPulse work offline?
+### Does HearthRate work offline?
 
-Yes! ShowPulse is built with offline-first architecture. You can:
+Yes! HearthRate is built with offline-first architecture. You can:
 
-- Capture leads without internet
-- Conduct tours offline
-- Rate properties without connectivity
-- Everything syncs automatically when you're back online
+-   Capture leads without internet
+-   Conduct tours offline
+-   Rate properties without connectivity
+-   Everything syncs automatically when you're back online
 
-### What devices does ShowPulse support?
+### What devices does HearthRate support?
 
-ShowPulse works on:
+HearthRate works on:
 
-- **Desktop**: Windows, Mac, Linux (any modern browser)
-- **Mobile**: iOS (Safari), Android (Chrome)
-- **Tablets**: iPad, Android tablets
+-   **Desktop**: Windows, Mac, Linux (any modern browser)
+-   **Mobile**: iOS (Safari), Android (Chrome)
+-   **Tablets**: iPad, Android tablets
 
 No app download required - it's fully web-based!
 
 ### Do I need to install anything?
 
-No! ShowPulse is a web application. Just visit the URL in any modern browser and you're ready to go.
+No! HearthRate is a web application. Just visit the URL in any modern browser and you're ready to go.
 
-### Can I use ShowPulse on multiple devices?
+### Can I use HearthRate on multiple devices?
 
 Yes! Your account syncs across all devices. Start a tour on your laptop and finish on your tablet.
 
@@ -177,13 +177,13 @@ Yes! Your account syncs across all devices. Start a tour on your laptop and fini
 
 ## Integrations
 
-### Does ShowPulse integrate with my CRM?
+### Does HearthRate integrate with my CRM?
 
-Yes! ShowPulse supports:
+Yes! HearthRate supports:
 
-- **Webhooks**: Send leads to any CRM via HTTP POST
-- **Zapier**: Connect to 5,000+ apps (coming soon)
-- **API**: Build custom integrations
+-   **Webhooks**: Send leads to any CRM via HTTP POST
+-   **Zapier**: Connect to 5,000+ apps (coming soon)
+-   **API**: Build custom integrations
 
 [View integration guide →](INTEGRATIONS.md)
 
@@ -191,9 +191,9 @@ Yes! ShowPulse supports:
 
 Yes! Click "Export" on the Leads page to download all leads as CSV. Import into your CRM or spreadsheet.
 
-### Does ShowPulse send email/SMS?
+### Does HearthRate send email/SMS?
 
-ShowPulse can send tour invites and notifications via email. SMS support is coming soon.
+HearthRate can send tour invites and notifications via email. SMS support is coming soon.
 
 ---
 
@@ -203,10 +203,10 @@ ShowPulse can send tour invites and notifications via email. SMS support is comi
 
 Team plans provide multiple seats for your brokerage:
 
-- **Shared leads**: Distribute leads among agents
-- **Team analytics**: See brokerage-wide stats
-- **Member management**: Add/remove agents
-- **Seat-based pricing**: Pay per active user
+-   **Shared leads**: Distribute leads among agents
+-   **Team analytics**: See brokerage-wide stats
+-   **Member management**: Add/remove agents
+-   **Seat-based pricing**: Pay per active user
 
 ### Can I add and remove team members?
 
@@ -214,9 +214,9 @@ Yes! Admins can invite and remove team members from Organization Settings. Seats
 
 ### What's the difference between Individual and Team plans?
 
-- **Individual**: Single user account
-- **Team Seat**: Join an existing team (managed by admin)
-- **Team Admin**: Create and manage your own team
+-   **Individual**: Single user account
+-   **Team Seat**: Join an existing team (managed by admin)
+-   **Team Admin**: Create and manage your own team
 
 ---
 
@@ -228,30 +228,30 @@ Click "Forgot Password" on the login page. Enter your email to receive a reset l
 
 ### Why can't clients access my tour link?
 
-- Check that you sent the correct magic link
-- Ensure the tour hasn't been deleted
-- Try resending the invite from your dashboard
+-   Check that you sent the correct magic link
+-   Ensure the tour hasn't been deleted
+-   Try resending the invite from your dashboard
 
 ### My QR code isn't scanning. What do I do?
 
-- Ensure good lighting and contrast
-- Try increasing the QR code size when printing
-- Have visitors type the URL manually instead
+-   Ensure good lighting and contrast
+-   Try increasing the QR code size when printing
+-   Have visitors type the URL manually instead
 
 ### Data isn't syncing. What's wrong?
 
-- Check your internet connection
-- Refresh the page
-- Check the connection status indicator (green = synced, yellow = pending)
+-   Check your internet connection
+-   Refresh the page
+-   Check the connection status indicator (green = synced, yellow = pending)
 
 ### I'm seeing an error message. What should I do?
 
 1. Try refreshing the page
 2. Clear your browser cache
-3. If the error persists, email support@showpulse.com with:
-   - Screenshot of the error
-   - What you were doing when it occurred
-   - Your account email
+3. If the error persists, email support@hearthrate.app with:
+    - Screenshot of the error
+    - What you were doing when it occurred
+    - Your account email
 
 ---
 
@@ -259,8 +259,8 @@ Click "Forgot Password" on the login page. Enter your email to receive a reset l
 
 We're here to help!
 
-- **Email:** support@showpulse.com
-- **Response Time:** Within 24 hours (business days)
-- **Hours:** Monday-Friday, 9 AM - 5 PM ET
+-   **Email:** support@hearthrate.app
+-   **Response Time:** Within 24 hours (business days)
+-   **Hours:** Monday-Friday, 9 AM - 5 PM ET
 
 For API questions, check our [API Documentation](API.md).

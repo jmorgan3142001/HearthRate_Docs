@@ -1,8 +1,8 @@
-# ShowPulse API Documentation
+# HearthRate API Documentation
 
 ## Overview
 
-ShowPulse provides a RESTful API for managing real estate showings, tours, leads, and decision decks. All endpoints are prefixed with `/api/v1/`.
+HearthRate provides a RESTful API for managing real estate showings, tours, leads, and decision decks. All endpoints are prefixed with `/api/v1/`.
 
 ## Authentication
 
@@ -60,17 +60,17 @@ Authorization: Bearer <access_token>
 
 ```json
 {
-  "id": "user-uuid",
-  "email": "agent@example.com",
-  "first_name": "Jane",
-  "last_name": "Smith",
-  "phone": "+1234567890",
-  "bio": "Realtor specializing in downtown condos",
-  "license_number": "RE123456",
-  "brokerage_name": "Smith Realty",
-  "profile_picture": "https://cdn.showpulse.io/profiles/user-uuid.jpg",
-  "timezone": "US/Eastern",
-  "created_at": "2024-01-15T10:00:00Z"
+	"id": "user-uuid",
+	"email": "agent@example.com",
+	"first_name": "Jane",
+	"last_name": "Smith",
+	"phone": "+1234567890",
+	"bio": "Realtor specializing in downtown condos",
+	"license_number": "RE123456",
+	"brokerage_name": "Smith Realty",
+	"profile_picture": "https://hearthrate.app/profiles/user-uuid.jpg",
+	"timezone": "US/Eastern",
+	"created_at": "2024-01-15T10:00:00Z"
 }
 ```
 
@@ -105,14 +105,14 @@ photo: <image file>
 
 **Constraints:**
 
-- Max file size: 5MB
-- Allowed formats: JPEG, PNG, WebP
+-   Max file size: 5MB
+-   Allowed formats: JPEG, PNG, WebP
 
 **Response:**
 
 ```json
 {
-  "url": "https://cdn.showpulse.io/profiles/user-uuid.jpg"
+	"url": "https://hearthrate.app/profiles/user-uuid.jpg"
 }
 ```
 
@@ -127,12 +127,12 @@ Authorization: Bearer <access_token>
 
 **Response:** JSON file download containing:
 
-- User profile
-- Events
-- Leads
-- Tours
-- Decision decks
-- Subscription information
+-   User profile
+-   Events
+-   Leads
+-   Tours
+-   Decision decks
+-   Subscription information
 
 ### Request Account Deletion
 
@@ -145,8 +145,8 @@ Authorization: Bearer <access_token>
 
 ```json
 {
-  "message": "Deletion request submitted. Check your email to confirm.",
-  "request_id": "deletion-request-uuid"
+	"message": "Deletion request submitted. Check your email to confirm.",
+	"request_id": "deletion-request-uuid"
 }
 ```
 
@@ -164,31 +164,31 @@ Content-Type: application/json
 
 **Available tiers:**
 
-- `free` - Free tier (5 tours, 5 decks)
-- `pro` - Pro tier ($20/mo, unlimited)
-- `team-5` - Team 5 ($60/mo, 5 seats)
-- `team-10` - Team 10 ($100/mo, 10 seats)
-- `team-25` - Team 25 ($200/mo, 25 seats)
-- `team-50` - Team 50 ($350/mo, 50 seats)
+-   `free` - Free tier (5 tours, 5 decks)
+-   `pro` - Pro tier ($20/mo, unlimited)
+-   `team-5` - Team 5 ($60/mo, 5 seats)
+-   `team-10` - Team 10 ($100/mo, 10 seats)
+-   `team-25` - Team 25 ($200/mo, 25 seats)
+-   `team-50` - Team 50 ($350/mo, 50 seats)
 
 **Response:**
 
 ```json
 {
-  "id": "subscription-uuid",
-  "tier": {
-    "name": "Pro",
-    "slug": "pro",
-    "price_monthly": "20.00",
-    "features": {
-      "max_tours": 999,
-      "max_decks": 999,
-      "ai_scoring": true,
-      "offline_mode": true
-    }
-  },
-  "status": "active",
-  "current_period_end": "2024-04-15"
+	"id": "subscription-uuid",
+	"tier": {
+		"name": "Pro",
+		"slug": "pro",
+		"price_monthly": "20.00",
+		"features": {
+			"max_tours": 999,
+			"max_decks": 999,
+			"ai_scoring": true,
+			"offline_mode": true
+		}
+	},
+	"status": "active",
+	"current_period_end": "2024-04-15"
 }
 ```
 
@@ -231,14 +231,14 @@ Content-Type: application/json
 
 ```json
 {
-  "id": "tour-uuid",
-  "title": "Weekend Property Tour",
-  "tour_date": "2024-03-15T10:00:00Z",
-  "status": "draft",
-  "lobby_token": "lobby-uuid",
-  "lobby_url": "https://app.showpulse.io/tour/tour-uuid/lobby?token=lobby-uuid",
-  "stops": [],
-  "created_at": "2024-03-10T14:30:00Z"
+	"id": "tour-uuid",
+	"title": "Weekend Property Tour",
+	"tour_date": "2024-03-15T10:00:00Z",
+	"status": "draft",
+	"lobby_token": "lobby-uuid",
+	"lobby_url": "https://hearthrate.app/tour/tour-uuid/lobby?token=lobby-uuid",
+	"stops": [],
+	"created_at": "2024-03-10T14:30:00Z"
 }
 ```
 
@@ -257,9 +257,9 @@ Content-Type: application/json
 
 ```json
 {
-  "status": "success",
-  "running_late_minutes": 15,
-  "notified_at": "2024-03-15T10:05:00Z"
+	"status": "success",
+	"running_late_minutes": 15,
+	"notified_at": "2024-03-15T10:05:00Z"
 }
 ```
 
@@ -273,22 +273,22 @@ GET /api/v1/tours/{id}/leaderboard/
 
 ```json
 [
-  {
-    "rank": 1,
-    "property_id": "property-uuid",
-    "property_address": "123 Main Street",
-    "current_group_rating": 4.5,
-    "feedback_count": 3,
-    "unanimous": true
-  },
-  {
-    "rank": 2,
-    "property_id": "property-uuid-2",
-    "property_address": "456 Oak Avenue",
-    "current_group_rating": 4.0,
-    "feedback_count": 3,
-    "unanimous": false
-  }
+	{
+		"rank": 1,
+		"property_id": "property-uuid",
+		"property_address": "123 Main Street",
+		"current_group_rating": 4.5,
+		"feedback_count": 3,
+		"unanimous": true
+	},
+	{
+		"rank": 2,
+		"property_id": "property-uuid-2",
+		"property_address": "456 Oak Avenue",
+		"current_group_rating": 4.0,
+		"feedback_count": 3,
+		"unanimous": false
+	}
 ]
 ```
 
@@ -372,29 +372,29 @@ Content-Type: application/json
 
 **Supported Operation Types:**
 
-- `feedback_create` - Create new feedback
-- `feedback_update` - Update existing feedback
-- `tour_update` - Update tour details
-- `stop_reorder` - Reorder tour stops
-- `running_late` - Update running late status
+-   `feedback_create` - Create new feedback
+-   `feedback_update` - Update existing feedback
+-   `tour_update` - Update tour details
+-   `stop_reorder` - Reorder tour stops
+-   `running_late` - Update running late status
 
 **Response:**
 
 ```json
 {
-  "processed": 2,
-  "results": [
-    {
-      "offline_uuid": "client-uuid",
-      "status": "created",
-      "server_id": "feedback-uuid"
-    },
-    {
-      "offline_uuid": "client-uuid-2",
-      "status": "updated",
-      "server_id": "tour-uuid"
-    }
-  ]
+	"processed": 2,
+	"results": [
+		{
+			"offline_uuid": "client-uuid",
+			"status": "created",
+			"server_id": "feedback-uuid"
+		},
+		{
+			"offline_uuid": "client-uuid-2",
+			"status": "updated",
+			"server_id": "tour-uuid"
+		}
+	]
 }
 ```
 
@@ -441,27 +441,27 @@ GET /api/v1/decks/{id}/matrix/
 
 ```json
 {
-  "deck_id": "deck-uuid",
-  "title": "Final Three Properties",
-  "items": [
-    {
-      "id": "item-uuid",
-      "rank": 1,
-      "property": {
-        "id": "property-uuid",
-        "address": "123 Main Street",
-        "list_price": 450000,
-        "bedrooms": 3,
-        "bathrooms": 2.5
-      },
-      "tour_feedback": {
-        "avg_rating": 4.5,
-        "unanimous": true
-      },
-      "has_conflict": false
-    }
-  ],
-  "comparison_criteria": ["price", "location", "size", "condition"]
+	"deck_id": "deck-uuid",
+	"title": "Final Three Properties",
+	"items": [
+		{
+			"id": "item-uuid",
+			"rank": 1,
+			"property": {
+				"id": "property-uuid",
+				"address": "123 Main Street",
+				"list_price": 450000,
+				"bedrooms": 3,
+				"bathrooms": 2.5
+			},
+			"tour_feedback": {
+				"avg_rating": 4.5,
+				"unanimous": true
+			},
+			"has_conflict": false
+		}
+	],
+	"comparison_criteria": ["price", "location", "size", "condition"]
 }
 ```
 
@@ -520,21 +520,21 @@ Content-Type: application/json
 
 ```json
 {
-  "id": "scenario-uuid",
-  "name": "Standard Offer",
-  "offer_price": 440000,
-  "down_payment": 88000,
-  "loan_amount": 352000,
-  "monthly_payment": 2856,
-  "monthly_breakdown": {
-    "principal_interest": 2225,
-    "property_tax": 770,
-    "insurance": 150,
-    "hoa": 150,
-    "pmi": 0
-  },
-  "is_affordable": true,
-  "housing_ratio": 22.8
+	"id": "scenario-uuid",
+	"name": "Standard Offer",
+	"offer_price": 440000,
+	"down_payment": 88000,
+	"loan_amount": 352000,
+	"monthly_payment": 2856,
+	"monthly_breakdown": {
+		"principal_interest": 2225,
+		"property_tax": 770,
+		"insurance": 150,
+		"hoa": 150,
+		"pmi": 0
+	},
+	"is_affordable": true,
+	"housing_ratio": 22.8
 }
 ```
 
@@ -578,13 +578,13 @@ Content-Type: application/json
 
 **Supported Operation Types:**
 
-- `deck_create` - Create new deck
-- `deck_update` - Update deck
-- `item_create` - Add item to deck
-- `item_update` - Update deck item
-- `item_rerank` - Reorder items
-- `scenario_create` - Create offer scenario
-- `scenario_update` - Update scenario
+-   `deck_create` - Create new deck
+-   `deck_update` - Update deck
+-   `item_create` - Add item to deck
+-   `item_update` - Update deck item
+-   `item_rerank` - Reorder items
+-   `scenario_create` - Create offer scenario
+-   `scenario_update` - Update scenario
 
 ---
 
@@ -612,21 +612,21 @@ Content-Type: application/json
 
 ```json
 {
-  "loan_amount": 360000,
-  "down_payment": 90000,
-  "monthly_payment": 2856,
-  "monthly_breakdown": {
-    "principal_interest": 2275,
-    "property_tax": 787,
-    "insurance": 150,
-    "hoa": 150,
-    "pmi": 0
-  },
-  "closing_costs_estimate": 13500,
-  "cash_needed": 103500,
-  "housing_ratio": 22.8,
-  "is_affordable": true,
-  "max_affordable_price": 525000
+	"loan_amount": 360000,
+	"down_payment": 90000,
+	"monthly_payment": 2856,
+	"monthly_breakdown": {
+		"principal_interest": 2275,
+		"property_tax": 787,
+		"insurance": 150,
+		"hoa": 150,
+		"pmi": 0
+	},
+	"closing_costs_estimate": 13500,
+	"cash_needed": 103500,
+	"housing_ratio": 22.8,
+	"is_affordable": true,
+	"max_affordable_price": 525000
 }
 ```
 
@@ -660,13 +660,13 @@ Authorization: Bearer <access_token>
 
 ```json
 {
-  "id": "event-uuid",
-  "event_type": "PERPETUAL",
-  "title": "Jane's Lead Capture",
-  "active": true,
-  "qr_code_uuid": "qr-uuid",
-  "magic_link": "https://app.showpulse.io/kiosk?event=qr-uuid",
-  "created_at": "2024-01-15T10:00:00Z"
+	"id": "event-uuid",
+	"event_type": "PERPETUAL",
+	"title": "Jane's Lead Capture",
+	"active": true,
+	"qr_code_uuid": "qr-uuid",
+	"magic_link": "https://hearthrate.app/kiosk?event=qr-uuid",
+	"created_at": "2024-01-15T10:00:00Z"
 }
 ```
 
@@ -707,18 +707,18 @@ Leads are automatically scored using a dual-bucket system:
 
 ```json
 {
-  "active_leads": { "value": 42, "trend": "+15%" },
-  "event_signins": { "value": 156, "trend": "+8%" },
-  "offers_generated": { "value": 12, "trend": "+3" },
-  "recent_activity": [
-    {
-      "id": "lead-uuid",
-      "first_name": "John",
-      "last_name": "Doe",
-      "status_deal": "HOT",
-      "created_at": "2024-03-15T10:00:00Z"
-    }
-  ]
+	"active_leads": { "value": 42, "trend": "+15%" },
+	"event_signins": { "value": 156, "trend": "+8%" },
+	"offers_generated": { "value": 12, "trend": "+3" },
+	"recent_activity": [
+		{
+			"id": "lead-uuid",
+			"first_name": "John",
+			"last_name": "Doe",
+			"status_deal": "HOT",
+			"created_at": "2024-03-15T10:00:00Z"
+		}
+	]
 }
 ```
 
@@ -730,9 +730,9 @@ All errors follow a consistent format:
 
 ```json
 {
-  "error": "Human-readable error message",
-  "code": "error_code",
-  "details": {}
+	"error": "Human-readable error message",
+	"code": "error_code",
+	"details": {}
 }
 ```
 
@@ -740,9 +740,9 @@ All errors follow a consistent format:
 
 ## Rate Limiting
 
-- Anonymous: 500 requests/hour
-- Authenticated: 2000 requests/hour
-- Login attempts: 15 requests/minute
+-   Anonymous: 500 requests/hour
+-   Authenticated: 2000 requests/hour
+-   Login attempts: 15 requests/minute
 
 ---
 

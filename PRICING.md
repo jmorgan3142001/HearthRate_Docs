@@ -1,8 +1,8 @@
-# ShowPulse Pricing Structure
+# HearthRate Pricing Structure
 
 ## Overview
 
-ShowPulse uses a tiered pricing model designed to serve individual agents and scale to teams and brokerages. The pricing follows a declining per-seat cost model to incentivize larger team adoption while maintaining accessibility for solo agents.
+HearthRate uses a tiered pricing model designed to serve individual agents and scale to teams and brokerages. The pricing follows a declining per-seat cost model to incentivize larger team adoption while maintaining accessibility for solo agents.
 
 ## Pricing Tiers
 
@@ -125,7 +125,7 @@ Seats → Price
 
 ## Agent Portability
 
-ShowPulse is designed around the **agent as the primary entity**, not the brokerage. This means:
+HearthRate is designed around the **agent as the primary entity**, not the brokerage. This means:
 
 ### What Agents Own (Portable Across Organizations)
 

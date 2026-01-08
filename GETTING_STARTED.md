@@ -1,6 +1,6 @@
-# Getting Started with ShowPulse
+# Getting Started with HearthRate
 
-Welcome to ShowPulse! This guide will help you get up and running in minutes.
+Welcome to HearthRate! This guide will help you get up and running in minutes.
 
 ## Table of Contents
 
@@ -15,14 +15,14 @@ Welcome to ShowPulse! This guide will help you get up and running in minutes.
 
 ## Create Your Account
 
-1. Visit [showpulse.io](https://showpulse.io)
+1. Visit [hearthrate.app](https://hearthrate.app)
 2. Click **Sign Up**
 3. Enter your email and create a password
 4. Choose your plan:
 
-   - **Free**: Start with 5 tours + 5 decks
-   - **Pro**: Unlimited tours and decks ($20/month)
-   - **Team**: Collaborate with your brokerage
+    - **Free**: Start with 5 tours + 5 decks
+    - **Pro**: Unlimited tours and decks ($20/month)
+    - **Team**: Collaborate with your brokerage
 
 5. Verify your email address
 6. Complete your profile (name, brokerage, license number)
@@ -33,7 +33,7 @@ Welcome to ShowPulse! This guide will help you get up and running in minutes.
 
 ## Set Up Your First Event
 
-Every ShowPulse account comes with a **perpetual event** - an always-on lead capture page for open houses and showings.
+Every HearthRate account comes with a **perpetual event** - an always-on lead capture page for open houses and showings.
 
 ### Access Your Perpetual Event
 
@@ -63,9 +63,9 @@ QR codes let visitors quickly access your kiosk mode on their phones.
 
 ### Print Your QR Code
 
-- **Flyers**: Print on 8.5x11" paper
-- **Yard Signs**: Add to your open house signage
-- **Business Cards**: Include a small QR on the back
+-   **Flyers**: Print on 8.5x11" paper
+-   **Yard Signs**: Add to your open house signage
+-   **Business Cards**: Include a small QR on the back
 
 **Pro Tip:** QR codes are deterministic - they never change, so you can print them in bulk!
 
@@ -101,29 +101,29 @@ Your dashboard provides a unified view of all activity across leads, clients, to
 1. From your **Dashboard Home**
 2. Scroll to the **Recent Activity** section
 3. See a live feed of:
-   - New leads with status badges (HOT/WARM/COLD)
-   - New clients (from promotions or direct creation)
-   - Tour activities and updates
-   - Decision deck creation
+    - New leads with status badges (HOT/WARM/COLD)
+    - New clients (from promotions or direct creation)
+    - Tour activities and updates
+    - Decision deck creation
 
 ### Navigate from Activity
 
-- **Click any activity item** to jump to the detail page
-- View full context and take action
-- Navigate between related items (e.g., lead → promoted client)
+-   **Click any activity item** to jump to the detail page
+-   View full context and take action
+-   Navigate between related items (e.g., lead → promoted client)
 
 ### Browse Activity History
 
-- Use **pagination controls** to view older activity
-- See page indicators showing your position in history
-- Default view shows 20 most recent items
-- Activity updates every 60 seconds in real-time
+-   Use **pagination controls** to view older activity
+-   See page indicators showing your position in history
+-   Default view shows 20 most recent items
+-   Activity updates every 60 seconds in real-time
 
 ---
 
 ## Manage Clients and Groups
 
-ShowPulse helps you organize your buyer clients into household groups for collaborative property shopping.
+HearthRate helps you organize your buyer clients into household groups for collaborative property shopping.
 
 ### Create a Client
 
@@ -131,8 +131,8 @@ ShowPulse helps you organize your buyer clients into household groups for collab
 2. Ensure you're on the **Clients** tab
 3. Click **Create Client**
 4. Enter client information:
-   - First and last name
-   - Email and phone number
+    - First and last name
+    - Email and phone number
 5. Click **Create**
 
 ### Promote a Lead to Client
@@ -148,14 +148,15 @@ ShowPulse helps you organize your buyer clients into household groups for collab
 2. Switch to the **Client Groups** tab
 3. Click **Create Group**
 4. Enter group details:
-   - Group name (e.g., "Smith Family")
-   - Budget range (optional)
-   - Pre-approval amount (optional)
+    - Group name (e.g., "Smith Family")
+    - Budget range (optional)
+    - Pre-approval amount (optional)
 5. Click **Create**
 
 ### Add Clients to a Group
 
 **From the Client Detail Page:**
+
 1. Go to **Dashboard → Clients** → Click on a client
 2. Click **Add to Group**
 3. Choose **Existing Group** or **Create New Group**
@@ -163,6 +164,7 @@ ShowPulse helps you organize your buyer clients into household groups for collab
 5. Click **Add to Group**
 
 **From the Client Group Detail Page:**
+
 1. Go to **Dashboard → Clients** → **Client Groups** tab
 2. Click on a group
 3. Click **Add Members**
@@ -177,6 +179,7 @@ ShowPulse helps you organize your buyer clients into household groups for collab
 4. Archived items are hidden from main views but can be restored
 
 **To restore:**
+
 1. Go to **Dashboard → Archived**
 2. Find the archived item
 3. Click **Restore**
@@ -192,9 +195,9 @@ Tours let you guide clients through multiple properties with live feedback.
 1. Go to **Dashboard → Tours**
 2. Click **Create Tour**
 3. Enter tour details:
-   - Title (e.g., "Weekend Showings")
-   - Date and time
-   - Select your client group
+    - Title (e.g., "Weekend Showings")
+    - Date and time
+    - Select your client group
 4. Click **Create**
 
 ### Edit a Tour
@@ -202,9 +205,9 @@ Tours let you guide clients through multiple properties with live feedback.
 1. Open your tour from **Dashboard → Tours**
 2. Click **Edit**
 3. Update tour details:
-   - Title
-   - Scheduled start time
-   - Notes
+    - Title
+    - Scheduled start time
+    - Notes
 4. Click **Save Changes**
 
 ### Add Properties to Your Tour
@@ -212,10 +215,10 @@ Tours let you guide clients through multiple properties with live feedback.
 1. Open your tour
 2. Click **Add Stop**
 3. Enter property details:
-   - Address
-   - MLS number
-   - Price
-   - Notes
+    - Address
+    - MLS number
+    - Price
+    - Notes
 4. Repeat for each property
 
 ### Share with Clients
@@ -227,10 +230,10 @@ Tours let you guide clients through multiple properties with live feedback.
 
 ### View Live Feedback
 
-- **Leaderboard**: See which properties clients love most
-- **Room Ratings**: Kitchen, living, master, exterior, vibe
-- **Comments**: Read detailed feedback
-- **Conflicts**: See where partners disagree
+-   **Leaderboard**: See which properties clients love most
+-   **Room Ratings**: Kitchen, living, master, exterior, vibe
+-   **Comments**: Read detailed feedback
+-   **Conflicts**: See where partners disagree
 
 ---
 
@@ -243,9 +246,9 @@ Decision decks help clients compare properties side-by-side and model offers.
 1. Go to **Dashboard → Decks**
 2. Click **Create Deck**
 3. Enter deck details:
-   - Title (e.g., "Top 3 Contenders")
-   - Description
-   - Select client group
+    - Title (e.g., "Top 3 Contenders")
+    - Description
+    - Select client group
 4. Click **Create**
 
 ### Add Properties
@@ -260,10 +263,10 @@ Decision decks help clients compare properties side-by-side and model offers.
 1. Select a property
 2. Click **Add Scenario**
 3. Enter offer details:
-   - Offer price
-   - Down payment
-   - Interest rate
-   - Closing costs
+    - Offer price
+    - Down payment
+    - Interest rate
+    - Closing costs
 4. See monthly payment breakdown
 
 ### Share with Clients
@@ -279,23 +282,23 @@ Decision decks help clients compare properties side-by-side and model offers.
 
 ### Explore Advanced Features
 
-- **Offline Mode**: Work without internet, sync later
-- **AI Lead Scoring**: Automatic lead qualification
-- **Custom Branding**: Add your logo and colors (Pro plan)
-- **Team Features**: Collaborate with agents (Team plans)
-- **Integrations**: Connect to your CRM via webhooks
+-   **Offline Mode**: Work without internet, sync later
+-   **AI Lead Scoring**: Automatic lead qualification
+-   **Custom Branding**: Add your logo and colors (Pro plan)
+-   **Team Features**: Collaborate with agents (Team plans)
+-   **Integrations**: Connect to your CRM via webhooks
 
 ### Learn More
 
-- [API Documentation](API.md) - Build custom integrations
-- [Pricing Plans](PRICING.md) - Compare features and pricing
-- [FAQ](FAQ.md) - Common questions answered
+-   [API Documentation](API.md) - Build custom integrations
+-   [Pricing Plans](PRICING.md) - Compare features and pricing
+-   [FAQ](FAQ.md) - Common questions answered
 
 ### Get Help
 
-- **Email:** support@showpulse.com
-- **Response time:** Within 24 hours
-- **Hours:** Monday-Friday, 9 AM - 5 PM PT
+-   **Email:** support@hearthrate.app
+-   **Response time:** Within 24 hours
+-   **Hours:** Monday-Friday, 9 AM - 5 PM PT
 
 ---
 
@@ -313,24 +316,24 @@ Decision decks help clients compare properties side-by-side and model offers.
 
 ### Can't scan QR code?
 
-- Ensure good lighting and steady hands
-- Try the direct link instead
+-   Ensure good lighting and steady hands
+-   Try the direct link instead
 
 ### Lost internet during tour?
 
-- No problem! ShowPulse works offline
-- Data syncs when you're back online
+-   No problem! HearthRate works offline
+-   Data syncs when you're back online
 
 ### Client can't access tour?
 
-- Check the magic link hasn't expired
-- Resend the invite from your dashboard
+-   Check the magic link hasn't expired
+-   Resend the invite from your dashboard
 
 ### Need more help?
 
-- Email support@showpulse.com
-- Include your account email and describe the issue
+-   Email support@hearthrate.app
+-   Include your account email and describe the issue
 
 ---
 
-Welcome to ShowPulse! We're excited to help you capture more leads and close more deals. 🎉
+Welcome to HearthRate! We're excited to help you capture more leads and close more deals. 🎉
