@@ -16,12 +16,14 @@ Authorization: Bearer <access_token>
 
 ### Token Endpoints
 
-| Endpoint            | Method | Description                      |
-| ------------------- | ------ | -------------------------------- |
-| `/api/v1/register/` | POST   | Register a new agent account     |
-| `/api/v1/login/`    | POST   | Obtain access and refresh tokens |
-| `/api/v1/refresh/`  | POST   | Refresh an expired access token  |
-| `/api/v1/google/`   | POST   | Authenticate via Google OAuth    |
+| Endpoint              | Method | Description                        |
+| --------------------- | ------ | ---------------------------------- |
+| `/api/v1/register/`   | POST   | Register a new agent account       |
+| `/api/v1/login/`      | POST   | Obtain access and refresh tokens   |
+| `/api/v1/refresh/`    | POST   | Refresh an expired access token    |
+| `/api/v1/google/`     | POST   | Authenticate via Google OAuth      |
+| `/api/v1/microsoft/`  | POST   | Authenticate via Microsoft OAuth   |
+| `/api/v1/apple/`      | POST   | Authenticate via Apple Sign In     |
 
 ### Client Token Authentication
 
@@ -191,6 +193,144 @@ Content-Type: application/json
 	"current_period_end": "2024-04-15"
 }
 ```
+
+---
+
+## Contact Form API
+
+Public endpoint for website contact form submissions (no authentication required).
+
+### Contact Form Endpoint
+
+| Endpoint          | Method | Description                    |
+| ----------------- | ------ | ------------------------------ |
+| `/api/v1/contact/` | POST   | Submit contact form inquiry    |
+
+### Submit Contact Form
+
+```http
+POST /api/v1/contact/
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "phone": "+1234567890",
+  "company": "ABC Realty",
+  "subject": "Product Demo Request",
+  "message": "I'm interested in learning more about HearthRate..."
+}
+```
+
+**Request Fields:**
+
+-   `name` (string, required) - Contact's full name
+-   `email` (string, required) - Contact's email address
+-   `phone` (string, optional) - Contact's phone number
+-   `company` (string, optional) - Company or brokerage name
+-   `subject` (string, optional) - Subject of inquiry
+-   `message` (string, required) - Message content
+
+**Response:**
+
+```json
+{
+	"message": "Thank you! We'll be in touch soon.",
+	"id": "submission-uuid"
+}
+```
+
+---
+
+## Theme Management API
+
+Manage color themes for Pro subscribers. Themes allow brand customization across agent dashboards and client views.
+
+### Theme Endpoints
+
+| Endpoint                  | Method | Description                              |
+| ------------------------- | ------ | ---------------------------------------- |
+| `/api/v1/themes/`         | GET    | List all active themes                   |
+| `/api/v1/themes/{id}/`    | GET    | Get specific theme details               |
+| `/api/v1/themes/active/`  | GET    | Get user's currently active theme        |
+| `/api/v1/themes/select/`  | POST   | Select and apply a theme (Pro required)  |
+
+### List Themes
+
+```http
+GET /api/v1/themes/
+Authorization: Bearer <access_token>
+```
+
+**Response:**
+
+```json
+[
+	{
+		"id": "theme-uuid",
+		"name": "Coral Sunset",
+		"slug": "coral-sunset",
+		"colors": {
+			"primary": "#2B211A",
+			"accent": "#DF6C57",
+			"secondary": "#6AA7A7",
+			"background": "#F6F5F3",
+			"surface": "#FFFFFF"
+		},
+		"preview_image": "https://hearthrate.app/media/theme_previews/coral.jpg",
+		"description": "Warm, inviting colors perfect for residential real estate"
+	}
+]
+```
+
+### Get Active Theme
+
+Returns the user's currently active theme. Theme selection follows this precedence:
+1. User's selected theme (if set)
+2. Organization's selected theme (if user in org and org has theme)
+3. Default theme (`is_default=True`)
+
+```http
+GET /api/v1/themes/active/
+Authorization: Bearer <access_token>
+```
+
+**Response:** Theme object (same structure as list response)
+
+### Select Theme
+
+Select and apply a theme. Requires Pro subscription or higher.
+
+```http
+POST /api/v1/themes/select/
+Authorization: Bearer <access_token>
+Content-Type: application/json
+
+{
+  "theme_id": "theme-uuid",
+  "apply_to": "user"
+}
+```
+
+**Request Fields:**
+
+-   `theme_id` (string, optional) - Theme UUID to apply, or `null` to reset to default
+-   `apply_to` (string, optional) - `"user"` or `"organization"` (default: `"user"`)
+
+**Response:**
+
+```json
+{
+	"status": "User theme updated",
+	"theme": {
+		"id": "theme-uuid",
+		"name": "Coral Sunset",
+		"colors": { ... }
+	}
+}
+```
+
+**Note:** Theme selection requires Pro subscription or higher.
 
 ---
 

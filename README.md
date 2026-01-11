@@ -30,6 +30,12 @@ HearthRate is a comprehensive platform that helps real estate agents:
 
 ## Features
 
+### Authentication & Access
+
+-   **Multiple Sign-In Options**: Sign in with Google, Microsoft, Apple, or email
+-   **Email Magic Links**: Passwordless authentication for quick access
+-   **Secure Authentication**: Industry-standard JWT token-based security
+
 ### Lead Capture
 
 -   **Kiosk Mode**: Touchscreen-friendly sign-in for open houses
@@ -64,6 +70,11 @@ HearthRate is a comprehensive platform that helps real estate agents:
 -   **Affordability Calculator**: Monthly payment breakdown
 -   **Conflict Detection**: Highlights rating disagreements
 
+### Customization & Branding
+
+-   **Theme Customization** (Pro tier): Customize your dashboard and client views with professional color themes
+-   **Brand Personalization**: Apply themes across all agent dashboards and client-facing interfaces
+
 ### Dashboard & Activity
 
 -   **Unified Activity Feed**: Track all leads, clients, tours, and decks in one place
@@ -71,13 +82,18 @@ HearthRate is a comprehensive platform that helps real estate agents:
 -   **Quick Navigation**: Click any activity to jump to details
 -   **Real-Time Updates**: Stay informed with live activity tracking
 
+### Support & Contact
+
+-   **Contact Form**: Reach out directly through our contact form for inquiries, support, or demo requests
+-   **Quick Response**: Get help when you need it with our support team
+
 ## Pricing
 
 HearthRate offers flexible pricing for individuals and teams:
 
 -   **Free**: 5 tours + 5 decks, perfect for getting started
--   **Pro**: $20/month - Unlimited tours and decks with AI scoring
--   **Team Plans**: $60-$350/month - 5 to 50 seats with team features
+-   **Pro**: $20/month - Unlimited tours and decks with AI scoring, theme customization
+-   **Team Plans**: $60-$350/month - 5 to 50 seats with team features and branding
 
 [View full pricing details →](PRICING.md)
 
