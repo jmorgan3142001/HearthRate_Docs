@@ -16,12 +16,12 @@ Authorization: Bearer <access_token>
 
 ### Token Endpoints
 
-| Endpoint                 | Method | Description                      |
-| ------------------------ | ------ | -------------------------------- |
-| `/api/v1/auth/register/` | POST   | Register a new agent account     |
-| `/api/v1/auth/login/`    | POST   | Obtain access and refresh tokens |
-| `/api/v1/auth/refresh/`  | POST   | Refresh an expired access token  |
-| `/api/v1/auth/google/`   | POST   | Authenticate via Google OAuth    |
+| Endpoint            | Method | Description                      |
+| ------------------- | ------ | -------------------------------- |
+| `/api/v1/register/` | POST   | Register a new agent account     |
+| `/api/v1/login/`    | POST   | Obtain access and refresh tokens |
+| `/api/v1/refresh/`  | POST   | Refresh an expired access token  |
+| `/api/v1/google/`   | POST   | Authenticate via Google OAuth    |
 
 ### Client Token Authentication
 
@@ -40,19 +40,19 @@ Manage user profiles, subscriptions, and account data.
 
 ### Profile Endpoints
 
-| Endpoint                                 | Method | Description                           |
-| ---------------------------------------- | ------ | ------------------------------------- |
-| `/api/v1/auth/profile/`                  | GET    | Retrieve authenticated user's profile |
-| `/api/v1/auth/profile/`                  | PATCH  | Update user profile                   |
-| `/api/v1/auth/profile/upload-photo/`     | POST   | Upload profile picture                |
-| `/api/v1/auth/data-export/`              | GET    | Export all user data (GDPR/CCPA)      |
-| `/api/v1/auth/account/delete/`           | POST   | Request account deletion              |
-| `/api/v1/auth/subscription/change-plan/` | POST   | Change subscription tier              |
+| Endpoint                            | Method | Description                           |
+| ----------------------------------- | ------ | ------------------------------------- |
+| `/api/v1/profile/`                  | GET    | Retrieve authenticated user's profile |
+| `/api/v1/profile/`                  | PATCH  | Update user profile                   |
+| `/api/v1/profile/upload-photo/`     | POST   | Upload profile picture                |
+| `/api/v1/data-export/`              | GET    | Export all user data (GDPR/CCPA)      |
+| `/api/v1/account/delete/`           | POST   | Request account deletion              |
+| `/api/v1/subscription/change-plan/` | POST   | Change subscription tier              |
 
 ### Get User Profile
 
 ```http
-GET /api/v1/auth/profile/
+GET /api/v1/profile/
 Authorization: Bearer <access_token>
 ```
 
@@ -77,7 +77,7 @@ Authorization: Bearer <access_token>
 ### Update User Profile
 
 ```http
-PATCH /api/v1/auth/profile/
+PATCH /api/v1/profile/
 Authorization: Bearer <access_token>
 Content-Type: application/json
 
@@ -96,7 +96,7 @@ Content-Type: application/json
 ### Upload Profile Photo
 
 ```http
-POST /api/v1/auth/profile/upload-photo/
+POST /api/v1/profile/upload-photo/
 Authorization: Bearer <access_token>
 Content-Type: multipart/form-data
 
@@ -121,7 +121,7 @@ photo: <image file>
 Export all user data in JSON format for GDPR/CCPA compliance.
 
 ```http
-GET /api/v1/auth/data-export/
+GET /api/v1/data-export/
 Authorization: Bearer <access_token>
 ```
 
@@ -137,7 +137,7 @@ Authorization: Bearer <access_token>
 ### Request Account Deletion
 
 ```http
-POST /api/v1/auth/account/delete/
+POST /api/v1/account/delete/
 Authorization: Bearer <access_token>
 ```
 
@@ -153,7 +153,7 @@ Authorization: Bearer <access_token>
 ### Change Subscription Plan
 
 ```http
-POST /api/v1/auth/subscription/change-plan/
+POST /api/v1/subscription/change-plan/
 Authorization: Bearer <access_token>
 Content-Type: application/json
 
