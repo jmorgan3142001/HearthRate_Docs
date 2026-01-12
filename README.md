@@ -9,8 +9,8 @@ Welcome to the HearthRate public documentation. This repository contains user gu
 HearthRate is a comprehensive platform that helps real estate agents:
 
 -   **Capture Leads** - QR codes and kiosk mode for open houses
--   **Manage Tours** - Multiplayer property tours with live feedback
--   **Compare Properties** - Decision decks with financial modeling
+-   **Manage Tours** - Multiplayer property tours with live feedback and photo sharing
+-   **Compare Properties** - Decision decks with financial modeling and property photos
 -   **Score Leads** - Dual-bucket AI scoring system
 -   **Work Offline** - Full offline-first architecture
 
@@ -62,6 +62,10 @@ HearthRate is a comprehensive platform that helps real estate agents:
 -   **Silent Signals**: Private agent-only flags
 -   **Lobby Links**: One-click shareable links for client access
 -   **Tour Editing**: Update tour details on the fly
+-   **Property Photos**: Capture and share photos during tours with mobile camera integration
+-   **Photo Gallery**: View photos in tours and decision decks with automatic thumbnail generation
+-   **Batch Downloads**: Download photos as ZIP archives or PDF reports with notes
+-   **Client Photo Access**: Clients can upload, view, and download photos via magic links
 
 ### Decision Decks
 
@@ -69,6 +73,8 @@ HearthRate is a comprehensive platform that helps real estate agents:
 -   **Offer Scenarios**: Financial modeling with multiple scenarios
 -   **Affordability Calculator**: Monthly payment breakdown
 -   **Conflict Detection**: Highlights rating disagreements
+-   **Photo Integration**: Property photos automatically appear in decks from tours
+-   **Photo Downloads**: Download property photos with notes as PDF reports
 
 ### Customization & Branding
 

@@ -34,6 +34,10 @@ Clients (buyers) access tour lobbies and decks via magic links with access token
 /deck/{id}/view?token={client_access_token}
 ```
 
+Clients can also access property photos and other resources by including the token:
+- Query parameter: `?token={client_access_token}`
+- Header: `X-Client-Token: {client_access_token}`
+
 ---
 
 ## User Settings & Profile API
@@ -460,6 +464,146 @@ Content-Type: application/json
 | `/api/v1/tours/{tour_id}/stops/{stop_id}/feedback/`      | GET    | List feedback for a stop |
 | `/api/v1/tours/{tour_id}/stops/{stop_id}/feedback/`      | POST   | Submit feedback          |
 | `/api/v1/tours/{tour_id}/stops/{stop_id}/feedback/{id}/` | PATCH  | Update feedback          |
+
+### Tour Photo Endpoints
+
+Property photos can be uploaded during tours and are automatically visible in decks.
+
+| Endpoint                                                      | Method | Description                                    |
+| ------------------------------------------------------------- | ------ | ---------------------------------------------- |
+| `/api/v1/properties/photos/`                                  | GET    | List photos (filtered by client_group, property, tour) |
+| `/api/v1/properties/photos/`                                  | POST   | Upload single photo                            |
+| `/api/v1/properties/photos/bulk_upload/`                     | POST   | Upload multiple photos (max 10 per request)   |
+| `/api/v1/properties/photos/{id}/`                            | GET    | Get photo details                              |
+| `/api/v1/properties/photos/{id}/`                            | PATCH  | Update photo (caption, room_type, is_favorite) |
+| `/api/v1/properties/photos/{id}/`                            | DELETE | Delete photo                                   |
+| `/api/v1/properties/photos/by_property/`                     | GET    | Get photos for property + client group        |
+| `/api/v1/properties/photos/quota/`                           | GET    | Get photo count stats                          |
+| `/api/v1/properties/photos/download_zip/`                     | GET    | Download photos as ZIP file                   |
+| `/api/v1/properties/photos/download_pdf/`                    | GET    | Download photos with notes as PDF             |
+
+**Note:** Photo endpoints support both JWT authentication (agents) and client token authentication (clients via magic links).
+
+### Upload Photo
+
+```http
+POST /api/v1/properties/photos/
+Content-Type: multipart/form-data
+Authorization: Bearer <access_token>
+# OR for clients: ?token={client_access_token}
+
+client_group: {uuid}
+property: {uuid}
+tour_stop: {uuid} (optional)
+image: <image file>
+caption: "Beautiful kitchen!" (optional)
+room_type: "kitchen" (optional)
+```
+
+**Constraints:**
+- Max file size: 10MB
+- Allowed formats: JPEG, PNG, WebP, HEIC
+- Max 50 photos per property per client group
+- Thumbnails are auto-generated (300x300)
+
+**Response:**
+
+```json
+{
+	"id": "photo-uuid",
+	"client_group": "group-uuid",
+	"property": "property-uuid",
+	"image_url": "https://hearthrate.app/media/property_photos/2026/01/11/photo.jpg",
+	"thumbnail_url": "https://hearthrate.app/media/property_photos/thumbnails/2026/01/11/photo.jpg",
+	"caption": "Beautiful kitchen!",
+	"room_type": "kitchen",
+	"uploader_name": "John Agent",
+	"uploader_type": "agent",
+	"file_size": 2048576,
+	"width": 4032,
+	"height": 3024,
+	"created_at": "2026-01-11T14:30:00Z"
+}
+```
+
+### Bulk Upload Photos
+
+```http
+POST /api/v1/properties/photos/bulk_upload/
+Content-Type: multipart/form-data
+
+client_group: {uuid}
+property: {uuid}
+tour_stop: {uuid} (optional)
+photos[]: <file1>
+photos[]: <file2>
+photos[]: <file3>
+caption: "Tour photos" (optional, applied to all)
+room_type: "kitchen" (optional, applied to all)
+```
+
+**Response:**
+
+```json
+{
+	"count": 3,
+	"photos": [
+		{ "id": "photo-uuid-1", ... },
+		{ "id": "photo-uuid-2", ... },
+		{ "id": "photo-uuid-3", ... }
+	]
+}
+```
+
+### Get Photos by Property
+
+```http
+GET /api/v1/properties/photos/by_property/?client_group={uuid}&property={uuid}
+```
+
+**Response:**
+
+```json
+{
+	"count": 12,
+	"max_photos": 50,
+	"remaining": 38,
+	"photos": [
+		{
+			"id": "photo-uuid",
+			"image_url": "...",
+			"thumbnail_url": "...",
+			"caption": "...",
+			"uploader_name": "John Agent",
+			"created_at": "2026-01-11T14:30:00Z"
+		}
+	]
+}
+```
+
+### Download Photos as ZIP
+
+```http
+GET /api/v1/properties/photos/download_zip/?client_group={uuid}&property={uuid}
+GET /api/v1/properties/photos/download_zip/?client_group={uuid}&tour={uuid}
+GET /api/v1/properties/photos/download_zip/?client_group={uuid}&deck={uuid}
+```
+
+Downloads all photos matching the filters as a ZIP file. Filenames include property address and timestamp.
+
+### Download Photos with Notes as PDF
+
+```http
+GET /api/v1/properties/photos/download_pdf/?client_group={uuid}&property={uuid}
+GET /api/v1/properties/photos/download_pdf/?client_group={uuid}&tour={uuid}
+GET /api/v1/properties/photos/download_pdf/?client_group={uuid}&deck={uuid}
+```
+
+Downloads photos with captions/notes as a formatted PDF. Includes:
+- Full-size photos
+- Captions/notes for each photo
+- Metadata (uploader, room type, timestamp)
+- Grouped by property with page breaks
 
 ### Submit Feedback
 
