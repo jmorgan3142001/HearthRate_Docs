@@ -28,7 +28,7 @@ HearthRate is designed for:
 
 ### Do I need a credit card for the free plan?
 
-No! The free plan is completely free with no credit card required. You get 5 tours and 5 decision decks to test HearthRate.
+No! The starter plan is completely free with no credit card required. You get 5 tours and 5 decision decks to test HearthRate.
 
 ### Can I cancel anytime?
 

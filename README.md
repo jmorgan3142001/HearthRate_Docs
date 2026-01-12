@@ -97,7 +97,7 @@ HearthRate is a comprehensive platform that helps real estate agents:
 
 HearthRate offers flexible pricing for individuals and teams:
 
--   **Free**: 5 tours + 5 decks, perfect for getting started
+-   **Starter**: Free - 5 tours + 5 decks, perfect for getting started
 -   **Pro**: $20/month - Unlimited tours and decks with AI scoring, theme customization
 -   **Team Plans**: $60-$350/month - 5 to 50 seats with team features and branding
 

@@ -6,16 +6,18 @@ HearthRate uses a tiered pricing model designed to serve individual agents and s
 
 ## Pricing Tiers
 
-### Free Plan
+### Starter Plan
 
 -   **Price:** $0/month
 -   **Seats:** N/A (individual)
--   **Target Audience:** Agents trying out lead sign-in functionality
+-   **Target Audience:** Agents getting started with the platform
 -   **Features:**
     -   Unlimited open house and live events
     -   QR code sign-in
     -   Basic lead capture
     -   Lead export (CSV/PDF)
+    -   5 tours max (lifetime)
+    -   5 decision decks max (lifetime)
 
 ### Pro Plan
 
