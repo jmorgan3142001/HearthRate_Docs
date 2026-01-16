@@ -16,18 +16,18 @@ Authorization: Bearer <access_token>
 
 ### Token Endpoints
 
-| Endpoint              | Method | Description                        |
-| --------------------- | ------ | ---------------------------------- |
-| `/api/v1/register/`   | POST   | Register a new agent account       |
-| `/api/v1/login/`      | POST   | Obtain access and refresh tokens   |
-| `/api/v1/refresh/`    | POST   | Refresh an expired access token    |
-| `/api/v1/google/`     | POST   | Authenticate via Google OAuth      |
-| `/api/v1/microsoft/`  | POST   | Authenticate via Microsoft OAuth   |
-| `/api/v1/apple/`      | POST   | Authenticate via Apple Sign In     |
+| Endpoint             | Method | Description                      |
+| -------------------- | ------ | -------------------------------- |
+| `/api/v1/register/`  | POST   | Register a new agent account     |
+| `/api/v1/login/`     | POST   | Obtain access and refresh tokens |
+| `/api/v1/refresh/`   | POST   | Refresh an expired access token  |
+| `/api/v1/google/`    | POST   | Authenticate via Google OAuth    |
+| `/api/v1/microsoft/` | POST   | Authenticate via Microsoft OAuth |
+| `/api/v1/apple/`     | POST   | Authenticate via Apple Sign In   |
 
 ### Client Token Authentication
 
-Clients (buyers) access tour lobbies and decks via magic links with access tokens:
+Clients (buyers) access tour lobbies and decks via access links with access tokens:
 
 ```
 /tour/{id}/lobby?token={client_access_token}
@@ -35,8 +35,9 @@ Clients (buyers) access tour lobbies and decks via magic links with access token
 ```
 
 Clients can also access property photos and other resources by including the token:
-- Query parameter: `?token={client_access_token}`
-- Header: `X-Client-Token: {client_access_token}`
+
+-   Query parameter: `?token={client_access_token}`
+-   Header: `X-Client-Token: {client_access_token}`
 
 ---
 
@@ -206,9 +207,9 @@ Public endpoint for website contact form submissions (no authentication required
 
 ### Contact Form Endpoint
 
-| Endpoint          | Method | Description                    |
-| ----------------- | ------ | ------------------------------ |
-| `/api/v1/contact/` | POST   | Submit contact form inquiry    |
+| Endpoint           | Method | Description                 |
+| ------------------ | ------ | --------------------------- |
+| `/api/v1/contact/` | POST   | Submit contact form inquiry |
 
 ### Submit Contact Form
 
@@ -252,12 +253,12 @@ Manage color themes for Pro subscribers. Themes allow brand customization across
 
 ### Theme Endpoints
 
-| Endpoint                  | Method | Description                              |
-| ------------------------- | ------ | ---------------------------------------- |
-| `/api/v1/themes/`         | GET    | List all active themes                   |
-| `/api/v1/themes/{id}/`    | GET    | Get specific theme details               |
-| `/api/v1/themes/active/`  | GET    | Get user's currently active theme        |
-| `/api/v1/themes/select/`  | POST   | Select and apply a theme (Pro required)  |
+| Endpoint                 | Method | Description                             |
+| ------------------------ | ------ | --------------------------------------- |
+| `/api/v1/themes/`        | GET    | List all active themes                  |
+| `/api/v1/themes/{id}/`   | GET    | Get specific theme details              |
+| `/api/v1/themes/active/` | GET    | Get user's currently active theme       |
+| `/api/v1/themes/select/` | POST   | Select and apply a theme (Pro required) |
 
 ### List Themes
 
@@ -290,6 +291,7 @@ Authorization: Bearer <access_token>
 ### Get Active Theme
 
 Returns the user's currently active theme. Theme selection follows this precedence:
+
 1. User's selected theme (if set)
 2. Organization's selected theme (if user in org and org has theme)
 3. Default theme (`is_default=True`)
@@ -469,20 +471,20 @@ Content-Type: application/json
 
 Property photos can be uploaded during tours and are automatically visible in decks.
 
-| Endpoint                                                      | Method | Description                                    |
-| ------------------------------------------------------------- | ------ | ---------------------------------------------- |
-| `/api/v1/properties/photos/`                                  | GET    | List photos (filtered by client_group, property, tour) |
-| `/api/v1/properties/photos/`                                  | POST   | Upload single photo                            |
-| `/api/v1/properties/photos/bulk_upload/`                     | POST   | Upload multiple photos (max 10 per request)   |
-| `/api/v1/properties/photos/{id}/`                            | GET    | Get photo details                              |
-| `/api/v1/properties/photos/{id}/`                            | PATCH  | Update photo (caption, room_type, is_favorite) |
-| `/api/v1/properties/photos/{id}/`                            | DELETE | Delete photo                                   |
-| `/api/v1/properties/photos/by_property/`                     | GET    | Get photos for property + client group        |
-| `/api/v1/properties/photos/quota/`                           | GET    | Get photo count stats                          |
-| `/api/v1/properties/photos/download_zip/`                     | GET    | Download photos as ZIP file                   |
-| `/api/v1/properties/photos/download_pdf/`                    | GET    | Download photos with notes as PDF             |
+| Endpoint                                  | Method | Description                                            |
+| ----------------------------------------- | ------ | ------------------------------------------------------ |
+| `/api/v1/properties/photos/`              | GET    | List photos (filtered by client_group, property, tour) |
+| `/api/v1/properties/photos/`              | POST   | Upload single photo                                    |
+| `/api/v1/properties/photos/bulk_upload/`  | POST   | Upload multiple photos (max 10 per request)            |
+| `/api/v1/properties/photos/{id}/`         | GET    | Get photo details                                      |
+| `/api/v1/properties/photos/{id}/`         | PATCH  | Update photo (caption, room_type, is_favorite)         |
+| `/api/v1/properties/photos/{id}/`         | DELETE | Delete photo                                           |
+| `/api/v1/properties/photos/by_property/`  | GET    | Get photos for property + client group                 |
+| `/api/v1/properties/photos/quota/`        | GET    | Get photo count stats                                  |
+| `/api/v1/properties/photos/download_zip/` | GET    | Download photos as ZIP file                            |
+| `/api/v1/properties/photos/download_pdf/` | GET    | Download photos with notes as PDF                      |
 
-**Note:** Photo endpoints support both JWT authentication (agents) and client token authentication (clients via magic links).
+**Note:** Photo endpoints support both JWT authentication (agents) and client token authentication (clients via access links).
 
 ### Upload Photo
 
@@ -501,10 +503,11 @@ room_type: "kitchen" (optional)
 ```
 
 **Constraints:**
-- Max file size: 10MB
-- Allowed formats: JPEG, PNG, WebP, HEIC
-- Max 50 photos per property per client group
-- Thumbnails are auto-generated (300x300)
+
+-   Max file size: 10MB
+-   Allowed formats: JPEG, PNG, WebP, HEIC
+-   Max 50 photos per property per client group
+-   Thumbnails are auto-generated (300x300)
 
 **Response:**
 
@@ -600,10 +603,11 @@ GET /api/v1/properties/photos/download_pdf/?client_group={uuid}&deck={uuid}
 ```
 
 Downloads photos with captions/notes as a formatted PDF. Includes:
-- Full-size photos
-- Captions/notes for each photo
-- Metadata (uploader, room type, timestamp)
-- Grouped by property with page breaks
+
+-   Full-size photos
+-   Captions/notes for each photo
+-   Metadata (uploader, room type, timestamp)
+-   Grouped by property with page breaks
 
 ### Submit Feedback
 
@@ -700,7 +704,7 @@ Decision Decks are comparison boards for narrowed-down properties with financial
 | `/api/v1/decks/{id}/matrix/`     | GET    | Get comparison matrix     |
 | `/api/v1/decks/{id}/share_link/` | GET    | Get shareable client link |
 | `/api/v1/decks/{id}/export_pdf/` | GET    | Export as PDF             |
-| `/api/v1/decks/{id}/view/`       | GET    | Client view (magic link)  |
+| `/api/v1/decks/{id}/view/`       | GET    | Client view (access link) |
 | `/api/v1/decks/sync/`            | POST   | Sync offline operations   |
 
 ### Create Deck

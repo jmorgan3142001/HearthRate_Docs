@@ -77,7 +77,7 @@ Leads appear in your Dashboard → Leads page. You can filter, search, and expor
 
 ### What is multiplayer mode?
 
-Multiplayer mode lets multiple household members join the same tour. Each person gets their own magic link and can rate properties independently. You'll see combined scores and identify where partners disagree.
+Multiplayer mode lets multiple household members join the same tour. Each person gets their own access link and can rate properties independently. You'll see combined scores and identify where partners disagree.
 
 ### Can clients rate properties without me?
 
@@ -228,7 +228,7 @@ Click "Forgot Password" on the login page. Enter your email to receive a reset l
 
 ### Why can't clients access my tour link?
 
--   Check that you sent the correct magic link
+-   Check that you sent the correct access link
 -   Ensure the tour hasn't been deleted
 -   Try resending the invite from your dashboard
 

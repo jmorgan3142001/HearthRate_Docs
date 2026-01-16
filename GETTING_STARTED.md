@@ -77,7 +77,7 @@ Your kiosk mode is where visitors sign in at open houses.
 
 ### How It Works
 
-1. **Visitor scans QR code** or visits your magic link
+1. **Visitor scans QR code** or visits your access link
 2. **Progressive form** collects name, email, phone
 3. **Qualification questions** determine buying readiness
 4. **Lead scoring** automatically rates each lead
@@ -272,7 +272,7 @@ Decision decks help clients compare properties side-by-side and model offers.
 ### Share with Clients
 
 1. Click **Share Deck**
-2. Send magic link to clients
+2. Send access link to clients
 3. Clients can view, comment, and compare
 4. Discuss via built-in messaging
 
@@ -326,7 +326,7 @@ Decision decks help clients compare properties side-by-side and model offers.
 
 ### Client can't access tour?
 
--   Check the magic link hasn't expired
+-   Check the access link hasn't expired
 -   Resend the invite from your dashboard
 
 ### Need more help?

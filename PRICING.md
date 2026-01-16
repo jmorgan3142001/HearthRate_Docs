@@ -34,7 +34,7 @@ HearthRate uses a tiered pricing model designed to serve individual agents and s
     -   Decision Deck comparisons
     -   Offer scenario modeling
     -   Offline mode
-    -   Client magic links
+    -   Client access links
     -   Priority support
 
 ### Team Plans

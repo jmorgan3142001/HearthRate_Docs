@@ -13,7 +13,7 @@ HearthRate is a real estate showing management platform that enables agents to:
 -   Manage property tours with clients
 -   Capture and score leads from open houses
 -   Create decision decks for property comparisons
--   Collaborate with clients via magic links
+-   Collaborate with clients via access links
 
 ## 3. User Accounts
 

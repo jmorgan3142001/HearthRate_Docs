@@ -33,13 +33,13 @@ HearthRate is a comprehensive platform that helps real estate agents:
 ### Authentication & Access
 
 -   **Multiple Sign-In Options**: Sign in with Google, Microsoft, Apple, or email
--   **Email Magic Links**: Passwordless authentication for quick access
+-   **Email Access Links**: Passwordless authentication for quick access
 -   **Secure Authentication**: Industry-standard JWT token-based security
 
 ### Lead Capture
 
 -   **Kiosk Mode**: Touchscreen-friendly sign-in for open houses
--   **QR Codes**: Downloadable QR codes for event magic links
+-   **QR Codes**: Downloadable QR codes for event access links
 -   **Perpetual Events**: Always-on lead capture that never expires
 -   **Dual Scoring**: Automatic lead qualification (Deal Score + Lead Score)
 -   **Offline Support**: Works without internet, syncs when connected
@@ -55,7 +55,7 @@ HearthRate is a comprehensive platform that helps real estate agents:
 
 ### Tour Management
 
--   **Multiplayer Mode**: Multiple household members join via magic links
+-   **Multiplayer Mode**: Multiple household members join via access links
 -   **Live Leaderboard**: Real-time property rankings
 -   **Room-by-Room Rating**: Detailed feedback on every space
 -   **ETA Tracker**: One-tap running late notifications
@@ -65,7 +65,7 @@ HearthRate is a comprehensive platform that helps real estate agents:
 -   **Property Photos**: Capture and share photos during tours with mobile camera integration
 -   **Photo Gallery**: View photos in tours and decision decks with automatic thumbnail generation
 -   **Batch Downloads**: Download photos as ZIP archives or PDF reports with notes
--   **Client Photo Access**: Clients can upload, view, and download photos via magic links
+-   **Client Photo Access**: Clients can upload, view, and download photos via access links
 
 ### Decision Decks
 

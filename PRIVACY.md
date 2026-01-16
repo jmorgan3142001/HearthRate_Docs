@@ -45,7 +45,7 @@ We do not sell your personal information. We may share your information in the f
 -   **Service providers:** Third-party vendors who perform services on our behalf (hosting, analytics, payment processing)
 -   **Business transfers:** In connection with a merger, acquisition, or sale of assets
 -   **Legal requirements:** When required by law or to protect our rights
--   **Client data:** Tour and event data may be shared with household members via magic links
+-   **Client data:** Tour and event data may be shared with household members via access links
 
 ## Your Privacy Rights
 
