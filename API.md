@@ -694,18 +694,19 @@ Decision Decks are comparison boards for narrowed-down properties with financial
 
 ### Deck Endpoints
 
-| Endpoint                         | Method | Description               |
-| -------------------------------- | ------ | ------------------------- |
-| `/api/v1/decks/`                 | GET    | List all decks            |
-| `/api/v1/decks/`                 | POST   | Create a new deck         |
-| `/api/v1/decks/{id}/`            | GET    | Get deck details          |
-| `/api/v1/decks/{id}/`            | PATCH  | Update deck               |
-| `/api/v1/decks/{id}/`            | DELETE | Delete deck               |
-| `/api/v1/decks/{id}/matrix/`     | GET    | Get comparison matrix     |
-| `/api/v1/decks/{id}/share_link/` | GET    | Get shareable client link |
-| `/api/v1/decks/{id}/export_pdf/` | GET    | Export as PDF             |
-| `/api/v1/decks/{id}/view/`       | GET    | Client view (access link) |
-| `/api/v1/decks/sync/`            | POST   | Sync offline operations   |
+| Endpoint                                | Method | Description                     |
+| --------------------------------------- | ------ | ------------------------------- |
+| `/api/v1/decks/`                        | GET    | List all decks                  |
+| `/api/v1/decks/`                        | POST   | Create a new deck               |
+| `/api/v1/decks/{id}/`                   | GET    | Get deck details                |
+| `/api/v1/decks/{id}/`                   | PATCH  | Update deck                     |
+| `/api/v1/decks/{id}/`                   | DELETE | Delete deck                     |
+| `/api/v1/decks/{id}/matrix/`            | GET    | Get comparison matrix           |
+| `/api/v1/decks/{id}/generate-ai-sort/`  | POST   | Generate AI-powered sort order  |
+| `/api/v1/decks/{id}/share_link/`        | GET    | Get shareable client link       |
+| `/api/v1/decks/{id}/export_pdf/`        | GET    | Export as PDF                   |
+| `/api/v1/decks/{id}/view/`              | GET    | Client view (access link)       |
+| `/api/v1/decks/sync/`                   | POST   | Sync offline operations         |
 
 ### Create Deck
 
@@ -752,6 +753,38 @@ GET /api/v1/decks/{id}/matrix/
 	"comparison_criteria": ["price", "location", "size", "condition"]
 }
 ```
+
+### Generate AI-Powered Sort
+
+Use AI to intelligently rank properties based on client feedback, ratings, and value analysis. Perfect for helping clients make data-driven decisions.
+
+```http
+POST /api/v1/decks/{id}/generate-ai-sort/
+Authorization: Bearer <access_token>
+```
+
+**Response:**
+
+```json
+{
+	"ai_sort_order": ["item-uuid-1", "item-uuid-2", "item-uuid-3"],
+	"ai_summary": "Based on your family's feedback, 123 Main St ranks highest with strong ratings and excellent value. The property at 456 Oak Ave follows closely with great features. While 789 Pine Rd has the lowest price, mixed reviews suggest careful consideration.",
+	"cached": false
+}
+```
+
+**Features:**
+- Analyzes client ratings, pros/cons, notes, and price-value ratios
+- Generates human-readable explanation (2-3 sentences)
+- Results cached in database for performance
+- Uses cost-effective AI model (GPT-4o-mini)
+- Automatic cache refresh when deck items change
+
+**Use Cases:**
+- Help indecisive clients prioritize properties
+- Generate objective property rankings
+- Provide data-backed recommendations
+- Create shareable summaries for family discussions
 
 ### Deck Item Endpoints (Nested)
 
